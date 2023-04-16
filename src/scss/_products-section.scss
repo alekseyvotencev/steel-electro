@@ -1,0 +1,50 @@
+.products-section {
+    padding-top: 12rem;
+
+    &__heading {
+        margin-bottom: 3rem;
+        font-weight: 500;
+        font-size: 3.5rem;
+        line-height: 4.2rem;
+    }
+}
+
+.product-swiper__container {
+    position: relative;
+}
+
+.product-swiper {
+    &__slide {
+        width: 36rem;
+        position: relative;
+
+        &-img {
+            margin-bottom: 2rem;
+            width: 100%;
+            height: 46rem;
+            object-fit: cover;
+        }
+
+        &-name {
+            margin-bottom: 2rem;
+            display: inline-block;
+            font-size: 1.8rem;
+            line-height: 2.3rem;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-price {
+            font-weight: 500;
+            font-size: 2.5rem;
+            line-height: 3.2rem;
+        }
+    }
+}

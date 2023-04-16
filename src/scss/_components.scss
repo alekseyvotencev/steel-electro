@@ -1,0 +1,225 @@
+$lightGray: #efefef;
+$white: #ffffff;
+$red: #c3252c;
+$gray: #b7b7b7;
+$black: #2c2a2c;
+
+.breadcrumbs {
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+
+            &::after {
+                content: "/";
+                position: absolute;
+                top: 0;
+                right: -1.5rem;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.heading1 {
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 4.8rem;
+}
+
+.heading2 {
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+
+    &__btn {
+        padding: 1.1rem 1.5rem;
+        min-width: 15.2rem;
+        font-family: "Montserrat";
+        font-size: 2rem;
+        line-height: 2.4rem;
+        text-align: center;
+        background-color: $white;
+        border-radius: 3rem;
+        transition-property: color, background-color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        &.active {
+            background-color: $black;
+            color: $white;
+        }
+    }
+}
+
+.pagination {
+    &__list {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 0.5rem;
+            }
+
+            &.dots {
+                font-family: "Montserrat";
+                font-size: 1.6rem;
+                line-height: 2rem;
+                text-align: center;
+                color: #7a7a7a;
+            }
+
+            &__btn {
+                padding: 0.3rem 1rem;
+                min-width: 3.9rem;
+                font-family: "Montserrat";
+                font-size: 1.6rem;
+                line-height: 2rem;
+                text-align: center;
+                color: #7a7a7a;
+                border: 1px solid #7a7a7a;
+                transition-property: border-color, background-color, color;
+                transition-duration: 0.2s;
+                transition-timing-function: ease-in-out;
+
+                &.active {
+                    border-color: $gray;
+                    background-color: $gray;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.red-btn {
+    width: 25rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $red;
+    background-color: $red;
+    transition: background-color 0.2s ease-in-out;
+
+    svg {
+        margin-right: 0.8rem;
+        width: 2.5rem;
+        height: 2.4rem;
+
+        path {
+            transition: stroke 0.2s ease-in-out;
+        }
+    }
+
+    span {
+        font-family: "Montserrat";
+        font-size: 2rem;
+        line-height: 2.4rem;
+        color: $white;
+        transition: color 0.2s ease-in-out;
+    }
+
+    &:hover {
+        background-color: $white;
+
+        svg {
+            path {
+                stroke: $red;
+            }
+        }
+
+        span {
+            color: $red;
+        }
+    }
+}
+
+.black-btn {
+    color: $white;
+    text-align: center;
+    font-family: "Montserrat";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+    background-color: $black;
+    border: 1px solid $black;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    span {
+        transition: color 0.2s ease-in-out;
+    }
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}
+
+.swiper-controllers {
+    .prev,
+    .next {
+        position: absolute;
+        top: 20rem;
+        width: 6.4rem;
+        height: 6.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+        border-radius: 50%;
+        cursor: pointer;
+        filter: drop-shadow(0px 0px 1.6rem rgba(0, 0, 0, 0.078));
+        z-index: 2;
+        transition-property: opacity, visibility;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+
+        &.swiper-button-disabled {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        svg {
+            width: 1.3rem;
+            height: 2.2rem;
+            object-fit: contain;
+        }
+    }
+
+    .prev {
+        left: 0;
+        transform: translateX(-50%);
+    }
+
+    .next {
+        right: 0;
+        transform: translateX(50%);
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bd3d2e96-cba3-46c0-8f30-c68fa989a9ee&lang=ru_RU"
+        type="text/javascript">
+        </script>
+    <link rel="stylesheet" href="./src/fonts/fonts.css">
+    <link rel="stylesheet" href="./src/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Карточка товара</title>
+</head>
+
+<body>
+    @@include('./templates/header.html')
+    <main>
+        <section class="product-card">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__item-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__item-link">Черный прокат</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__item-link">Сортовой прокат</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__item-link">Арматура А3</a>
+                    </li>
+                </ul>
+                <p class="product-card__heading heading1">Арматура 6 А3, длина 6 м, марка А500С в Алматы</p>
+                <div class="product-card__content">
+                    <img src="./src/images/product-card-img.png" alt="" class="product-card__img">
+                    <div class="product-card__center">
+                        <ul class="product-card__center-list">
+                            <li class="product-card__center-list__item">
+                                <p class="product-card__center-list__item-heading">Размер</p>
+                                <ul class="product-card__center-sublist size">
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn active">6</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">7</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">8</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">9</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">10</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">11</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">6</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">7</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">8</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">9</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">10</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">11</button></li>
+                                </ul>
+                            </li>
+                            <li class="product-card__center-list__item">
+                                <p class="product-card__center-list__item-heading">Марка</p>
+                                <ul class="product-card__center-sublist">
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn active">А500С</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">35ГС</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">25Г2С</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">35ГС</button></li>
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn">25Г2С</button></li>
+                                </ul>
+                            </li>
+                            <li class="product-card__center-list__item">
+                                <p class="product-card__center-list__item-heading">Длина</p>
+                                <ul class="product-card__center-sublist">
+                                    <li class="product-card__center-sublist__item"><button
+                                            class="product-card__center-sublist__item-btn active">6000</button></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-card__right">
+                        <div class="product-card__right-top">
+                            <p class="product-card__right-top__notice">от 10 тг/пог. м</p>
+                            <p class="product-card__right-top__price">от 10 000 тг/тн</p>
+                            <button class="product-card__right-top__button red-btn">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.49072 4H4.09704C5.11766 4 5.97456 4.7685 6.08524 5.78311L6.8962 13.2169C7.00689 14.2315 7.86378 15 8.88441 15H17.5367C18.398 15 19.156 14.4498 19.4298 13.6454C19.4636 13.546 19.4956 13.4458 19.5372 13.3494L22.4283 6.64486C22.4698 6.54844 22.5096 6.44807 22.5167 6.34331C22.5891 5.26565 20.1647 5.58889 18.9167 5.58889H7.09072M7.11548 18.6249H7.86548M7.11548 19.3749H7.86548M18.1155 18.6249H18.8655M18.1155 19.3749H18.8655M8.49072 19C8.49072 19.5523 8.04301 20 7.49072 20C6.93844 20 6.49072 19.5523 6.49072 19C6.49072 18.4477 6.93844 18 7.49072 18C8.04301 18 8.49072 18.4477 8.49072 19ZM19.4907 19C19.4907 19.5523 19.043 20 18.4907 20C17.9384 20 17.4907 19.5523 17.4907 19C17.4907 18.4477 17.9384 18 18.4907 18C19.043 18 19.4907 18.4477 19.4907 19Z"
+                                        stroke="white" stroke-width="1.3" stroke-linecap="round" />
+                                </svg>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                        <div class="product-card__right-bottom">
+                            <p>В наличии в</p>
+                            <button>Алматы</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        @@include('./templates/product-swiper1.html')
+        @@include('./templates/product-swiper2.html')
+        <div class="product__links">
+            <div class="container">
+                <a href="#" class="product__links-prev black-btn">Предыдущий товар</a>
+                <a href="#" class="product__links-next black-btn">Следующий товар</a>
+            </div>
+
+        </div>
+        @@include('./templates/description.html')
+        @@include('./templates/other-cities.html')
+    </main>
+    @@include('./templates/footer.html')
+</body>
+
+</html>

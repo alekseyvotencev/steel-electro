@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bd3d2e96-cba3-46c0-8f30-c68fa989a9ee&lang=ru_RU"
+        type="text/javascript">
+        </script>
+    <link rel="stylesheet" href="./src/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./src/fonts/fonts.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Новости</title>
+</head>
+
+<body>
+    @@include('./templates/header.html')
+    <main>
+        <section class="news-main">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__item-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__item-link">Новости</a>
+                    </li>
+                </ul>
+                <p class="news-main__heading heading1">Новости</p>
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <button class="tabs__btn" data-path="tag1">Прогноз цен</button>
+                        <button class="tabs__btn" data-path="tag2">Аналитика</button>
+                        <button class="tabs__btn" data-path="tag3">Тег</button>
+                        <button class="tabs__btn" data-path="tag4">Тег</button>
+                    </div>
+                </div>
+                <div class="news-main__content">
+                    <ul class="news-main__list active" data-target="tag1">
+                        <li class="news-main__list-item">
+                            <div class="news-main__list-item__left">
+                                <p class="news-main__list-item__left-number">20</p>
+                                <div class="news-main__list-item__left-text">
+                                    <p>марта</p>
+                                    <p>понедельник</p>
+                                </div>
+                            </div>
+                            <div class="news-main__list-item__center">
+                                <p class="news-main__list-item__center-title">Заголовок 1</p>
+                                <p class="news-main__list-item__center-description">По данным аналитиков, на российском
+                                    рынке листового проката и сварных труб наблюдается
+                                    значительный дефицит свободной продукции. Металлургические компании успешно наладили
+                                    экспортный процесс и в ито..</p>
+                                <a href="#" class="news-main__list-item__center-link">Читать полностью...</a>
+                            </div>
+                            <img src="./src/images/news-img1.png" alt="" class="news-main__list-item__img">
+                        </li>
+                        <li class="news-main__list-item">
+                            <div class="news-main__list-item__left">
+                                <p class="news-main__list-item__left-number">01</p>
+                                <div class="news-main__list-item__left-text">
+                                    <p>марта</p>
+                                    <p>понедельник</p>
+                                </div>
+                            </div>
+                            <div class="news-main__list-item__center">
+                                <p class="news-main__list-item__center-title">Заголовок 1</p>
+                                <p class="news-main__list-item__center-description">По данным аналитиков, на российском
+                                    рынке листового проката и сварных труб наблюдается
+                                    значительный дефицит свободной продукции. Металлургические компании успешно наладили
+                                    экспортный процесс и в ито..</p>
+                                <a href="#" class="news-main__list-item__center-link">Читать полностью...</a>
+                            </div>
+                            <img src="./src/images/news-img2.png" alt="" class="news-main__list-item__img">
+                        </li>
+                    </ul>
+                    <ul class="news-main__list" data-target="tag2">
+                        <li class="news-main__list-item">
+                            <div class="news-main__list-item__left">
+                                <p class="news-main__list-item__left-number">20</p>
+                                <div class="news-main__list-item__left-text">
+                                    <p>марта</p>
+                                    <p>понедельник</p>
+                                </div>
+                            </div>
+                            <div class="news-main__list-item__center">
+                                <p class="news-main__list-item__center-title">Заголовок 1</p>
+                                <p class="news-main__list-item__center-description">По данным аналитиков, на российском
+                                    рынке листового проката и сварных труб наблюдается
+                                    значительный дефицит свободной продукции. Металлургические компании успешно наладили
+                                    экспортный процесс и в ито..</p>
+                                <a href="#" class="news-main__list-item__center-link">Читать полностью...</a>
+                            </div>
+                            <img src="./src/images/news-img1.png" alt="" class="news-main__list-item__img">
+                        </li>
+                        <li class="news-main__list-item">
+                            <div class="news-main__list-item__left">
+                                <p class="news-main__list-item__left-number">01</p>
+                                <div class="news-main__list-item__left-text">
+                                    <p>марта</p>
+                                    <p>понедельник</p>
+                                </div>
+                            </div>
+                            <div class="news-main__list-item__center">
+                                <p class="news-main__list-item__center-title">Заголовок 1</p>
+                                <p class="news-main__list-item__center-description">По данным аналитиков, на российском
+                                    рынке листового проката и сварных труб наблюдается
+                                    значительный дефицит свободной продукции. Металлургические компании успешно наладили
+                                    экспортный процесс и в ито..</p>
+                                <a href="#" class="news-main__list-item__center-link">Читать полностью...</a>
+                            </div>
+                            <img src="./src/images/news-img2.png" alt="" class="news-main__list-item__img">
+                        </li>
+                        <li class="news-main__list-item">
+                            <div class="news-main__list-item__left">
+                                <p class="news-main__list-item__left-number">20</p>
+                                <div class="news-main__list-item__left-text">
+                                    <p>марта</p>
+                                    <p>понедельник</p>
+                                </div>
+                            </div>
+                            <div class="news-main__list-item__center">
+                                <p class="news-main__list-item__center-title">Заголовок 1</p>
+                                <p class="news-main__list-item__center-description">По данным аналитиков, на российском
+                                    рынке листового проката и сварных труб наблюдается
+                                    значительный дефицит свободной продукции. Металлургические компании успешно наладили
+                                    экспортный процесс и в ито..</p>
+                                <a href="#" class="news-main__list-item__center-link">Читать полностью...</a>
+                            </div>
+                            <img src="./src/images/news-img1.png" alt="" class="news-main__list-item__img">
+                        </li>
+                        <li class="news-main__list-item">
+                            <div class="news-main__list-item__left">
+                                <p class="news-main__list-item__left-number">01</p>
+                                <div class="news-main__list-item__left-text">
+                                    <p>марта</p>
+                                    <p>понедельник</p>
+                                </div>
+                            </div>
+                            <div class="news-main__list-item__center">
+                                <p class="news-main__list-item__center-title">Заголовок 1</p>
+                                <p class="news-main__list-item__center-description">По данным аналитиков, на российском
+                                    рынке листового проката и сварных труб наблюдается
+                                    значительный дефицит свободной продукции. Металлургические компании успешно наладили
+                                    экспортный процесс и в ито..</p>
+                                <a href="#" class="news-main__list-item__center-link">Читать полностью...</a>
+                            </div>
+                            <img src="./src/images/news-img2.png" alt="" class="news-main__list-item__img">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__list-item">
+                            <button class="pagination__list-item__btn active">1</button>
+                        </li>
+                        <li class="pagination__list-item">
+                            <button class="pagination__list-item__btn">2</button>
+                        </li>
+                        <li class="pagination__list-item">
+                            <button class="pagination__list-item__btn">3</button>
+                        </li>
+                        <li class="pagination__list-item dots">...</li>
+                        <li class="pagination__list-item">
+                            <button class="pagination__list-item__btn">10</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('./templates/footer.html')
+</body>
+
+</html>

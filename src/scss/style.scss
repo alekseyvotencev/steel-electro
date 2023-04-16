@@ -1,0 +1,36 @@
+@import "set";
+@import "components";
+@import "../fonts/fonts";
+
+@import "header";
+@import "footer";
+
+@import "news-main";
+
+@import "product-card";
+
+@import "products-section";
+
+@import "description";
+
+@import "other-cities";
+
+html {
+    overflow-y: scroll;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+@media (min-width: 48.01em) {
+    .mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: 48em) {
+    .desktop {
+        display: none !important;
+    }
+}

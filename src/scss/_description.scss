@@ -1,0 +1,16 @@
+.description {
+    margin-top: 12rem;
+
+    &__heading {
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        
+        &:not(:last-of-type) {
+            margin-bottom: 2.3rem;
+        }
+    }
+}

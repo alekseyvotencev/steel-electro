@@ -1,0 +1,90 @@
+.news-main {
+    padding-bottom: 15.5rem;
+    
+    &__heading {
+        margin-bottom: 3rem;
+    }
+
+    .tabs-container {
+        margin-bottom: 3rem;
+    }
+
+    &__list {
+        margin-bottom: 6rem;
+        padding-top: 4.1rem;
+        display: none;
+        border-top: 1px solid #b9b6b6;
+
+        &.active {
+            display: block;
+        }
+
+        &-item {
+            display: flex;
+            color: #000000;
+
+            &:not(:last-child) {
+                margin-bottom: 6rem;
+            }
+
+            &__left {
+                margin-right: 21.5rem;
+                display: flex;
+                align-items: center;
+
+                &-number {
+                    margin-right: 1rem;
+                    font-family: "Montserrat";
+                    font-size: 4.5rem;
+                    line-height: 5.5rem;
+                }
+
+                &-text {
+                    p {
+                        &:first-child {
+                            font-size: 1.8rem;
+                            line-height: 2.3rem;
+                        }
+
+                        &:last-child {
+                            font-weight: 300;
+                            font-size: 1.2rem;
+                            line-height: 1.6rem;
+                        }
+                    }
+                }
+            }
+
+            &__center {
+                width: 42rem;
+
+                &-title {
+                    margin-bottom: 2rem;
+                    font-weight: 600;
+                    font-size: 2.5rem;
+                    line-height: 3.2rem;
+                }
+
+                &-description {
+                    margin-bottom: 2rem;
+                    font-weight: 300;
+                    font-size: 1.8rem;
+                    line-height: 2.2rem;
+                }
+
+                &-link {
+                    font-size: 1.8rem;
+                    line-height: 2.3rem;
+                    text-decoration-line: underline;
+                }
+            }
+
+            &__img {
+                margin-left: auto;
+                width: 35.8rem;
+                height: 23.3rem;
+                object-fit: cover;
+            }
+        }
+    }
+}

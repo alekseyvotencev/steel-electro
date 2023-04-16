@@ -1,0 +1,41 @@
+.other-cities {
+    margin-top: 12rem;
+
+    &__heading {
+        margin-bottom: 3rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            margin-bottom: 2.6rem;
+
+            &:not(:nth-child(7n)) {
+                margin-right: 2rem;
+            }
+
+            &__link {
+                padding: 1.1rem;
+                min-width: 15.2rem;
+                display: inline-block;
+                font-family: "Montserrat";
+                font-size: 2rem;
+                line-height: 2.4rem;
+                text-align: center;
+                background-color: $gray;
+                border: 1px solid $gray;
+                border-radius: 3rem;
+                transition-property: background-color, border-color;
+                transition-duration: 0.2s;
+                transition-timing-function: ease-in-out;
+
+                &.active {
+                    background-color: $white;
+                    border-color: $black;
+                }
+            }
+        }
+    }
+}
