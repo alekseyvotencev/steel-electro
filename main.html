@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bd3d2e96-cba3-46c0-8f30-c68fa989a9ee&lang=ru_RU"
+        type="text/javascript">
+        </script>
+    <link rel="stylesheet" href="./src/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./src/fonts/fonts.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Главная</title>
+</head>
+
+<body>
+    @@include('./templates/header.html')
+    <main>
+        <section class="main-hero">
+            <div class="container">
+                <div class="main-hero__left">
+                    <p class="main-hero__left-heading heading1">Связаться с нами</p>
+                    <form action="#" class="main-hero__left-form">
+                        <input type="text" placeholder="Имя" class="main-hero__left-form__input">
+                        <input type="tel" placeholder="Телефон" class="main-hero__left-form__input">
+                        <label for="" class="main-hero__left-form__label">
+                            <input type="checkbox" class="main-hero__left-form__label-input">
+                            <span class="main-hero__left-form__label-checkbox"></span>
+                            <span class="main-hero__left-form__label-span">Даю согласие на обработку <a
+                                    href="#">Персональных данных</a></span>
+                        </label>
+                        <button class="main-hero__left-form__btn black-btn">Оставить заявку</button>
+                    </form>
+                </div>
+
+                <div class="swiper-container main-hero__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide main-hero__swiper-slide">
+                            <img src="./src/images/main-hero-img1.png" alt="" class="main-hero__swiper-slide__img">
+                            <div class="main-hero__swiper-slide__text">
+                                <p class="main-hero__swiper-slide__heading">Доставка во все регионы СНГ</p>
+                                <p class="main-hero__swiper-slide__description">Мы рады предложить бесплатную доставку
+                                    металлопроката на ваш объект в любой день
+                                    недели, включая выходные и праздничные дни.</p>
+                                <a href="#" class="main-hero__swiper-slide__link black-btn">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main-hero__swiper-slide">
+                            <img src="./src/images/main-hero-img1.png" alt="" class="main-hero__swiper-slide__img">
+                            <div class="main-hero__swiper-slide__text">
+                                <p class="main-hero__swiper-slide__heading">Доставка во все регионы СНГ</p>
+                                <p class="main-hero__swiper-slide__description">Мы рады предложить бесплатную доставку
+                                    металлопроката на ваш объект в любой день
+                                    недели, включая выходные и праздничные дни.</p>
+                                <a href="#" class="main-hero__swiper-slide__link black-btn">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main-hero__swiper-slide">
+                            <img src="./src/images/main-hero-img1.png" alt="" class="main-hero__swiper-slide__img">
+                            <div class="main-hero__swiper-slide__text">
+                                <p class="main-hero__swiper-slide__heading">Доставка во все регионы СНГ</p>
+                                <p class="main-hero__swiper-slide__description">Мы рады предложить бесплатную доставку
+                                    металлопроката на ваш объект в любой день
+                                    недели, включая выходные и праздничные дни.</p>
+                                <a href="#" class="main-hero__swiper-slide__link black-btn">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination main-hero__swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        @@include('./templates/advantages-section.html')
+        @@include('./templates/stages-section.html')
+        @@include('./templates/qa-section.html')
+        @@include('./templates/description.html')
+    </main>
+    @@include('./templates/footer.html')
+</body>
+
+</html>

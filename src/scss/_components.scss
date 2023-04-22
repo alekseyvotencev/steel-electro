@@ -160,7 +160,7 @@ $black: #2c2a2c;
     color: $white;
     text-align: center;
     font-family: "Montserrat";
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
@@ -223,3 +223,5 @@ $black: #2c2a2c;
         transform: translateX(50%);
     }
 }
+
+

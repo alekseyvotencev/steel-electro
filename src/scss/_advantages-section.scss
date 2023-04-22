@@ -1,0 +1,64 @@
+.advantages-section {
+    padding-top: 10rem;
+
+    &__heading {
+        margin-bottom: 6rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-item {
+            padding: 1.8rem 5.1rem 3.9rem 4.1rem;
+            width: 57rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            background-color: $black;
+
+            &.delivery {
+                .advantages-section__list-item__icon {
+                    margin-left: 2.8rem;
+                    width: 4.1rem;
+                    height: 4.1rem;
+                }
+
+                .advantages-section__list-item__text {
+                    width: 39rem;
+                }
+            }
+
+            &:not(:nth-last-child(-n + 2)) {
+                margin-bottom: 6rem;
+            }
+
+            &__icon {
+                width: 7.9rem;
+                height: 6.2rem;
+                object-fit: contain;
+            }
+
+            &__text {
+                width: 37rem;
+            }
+
+            &__title {
+                margin-bottom: 1rem;
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: 2.4rem;
+                color: $white;
+            }
+
+            &__description {
+                font-weight: 300;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                color: $white;
+            }
+        }
+    }
+}

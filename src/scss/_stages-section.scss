@@ -1,0 +1,47 @@
+.stages-section {
+    padding-top: 12rem;
+
+    &__heading {
+        margin-bottom: 6rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            padding: 2.7rem 7.5rem 2.6rem 3.4rem;
+            display: flex;
+            align-items: center;
+            width: 36rem;
+            color: #000;
+            background-color: $white;
+
+            &__number {
+                margin-right: 2.1rem;
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 5rem;
+                line-height: 6.1rem;
+            }
+
+            &__text {
+                width: 21.1rem;
+            }
+
+            &__title {
+                margin-bottom: 1rem;
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: 2.4rem;
+            }
+
+            &__description {
+                font-weight: 300;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+            }
+        }
+    }
+}

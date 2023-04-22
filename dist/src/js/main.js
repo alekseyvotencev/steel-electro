@@ -16,6 +16,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     })
 
+    // секция Вопросы и ответы
+
+    if (document.querySelector('.qa-section')) {
+        const qaBtns = document.querySelectorAll('.qa-section__list-item__head');
+        qaBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                btn.classList.toggle('active');
+                let content = btn.nextElementSibling;
+                content.classList.toggle('active');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null
+                } else {
+                    content.style.maxHeight = content.scrollHeight / 10 + "rem";
+                }
+            })
+        })
+    }
+
     // карта в футере
     ymaps.ready(init);
     function init() {

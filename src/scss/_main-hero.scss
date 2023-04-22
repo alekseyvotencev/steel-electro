@@ -1,0 +1,188 @@
+.main-hero {
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 36rem;
+        margin-top: 3.4rem;
+
+        &-heading {
+            margin-bottom: 2.4rem;
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+
+            &__input {
+                width: 100%;
+                padding-top: 1.7rem;
+                padding-bottom: 1rem;
+                font-weight: 700;
+                font-size: 1.1rem;
+                line-height: 1.3rem;
+                text-transform: uppercase;
+                border-bottom: 1px solid #7a7a7a;
+
+                &::placeholder {
+                    color: #7a7a7a;
+                }
+
+                &:not(:last-of-type) {
+                    margin-bottom: 2rem;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 4rem;
+                }
+            }
+
+            &__label {
+                margin-bottom: 4rem;
+                padding-left: 2.8rem;
+                position: relative;
+                cursor: pointer;
+
+                &-input {
+                    position: absolute;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                }
+
+                &-checkbox {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 2rem;
+                    height: 2rem;
+                    border: 1px solid #7a7a7a;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 1.5rem;
+                        height: 1rem;
+                        background-image: url(../images/svg/black-check.svg);
+                        background-size: contain;
+                        background-position: center;
+                        opacity: 0;
+                        transform: translate(-50%, -50%);
+                        transition: opacity 0.2s ease-in-out;
+                    }
+                }
+
+                &-input:checked + &-checkbox::after {
+                    opacity: 1;
+                }
+
+                &-span {
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                    color: #7a7a7a;
+
+                    a {
+                        color: $black;
+                        text-decoration: underline;
+                        text-underline-offset: 0.3rem;
+                    }
+                }
+            }
+
+            &__btn {
+                padding: 1.9rem;
+                min-width: 32rem;
+            }
+        }
+    }
+
+    &__swiper {
+        margin: 0;
+        width: 78rem;
+
+        .swiper-wrapper {
+            margin-bottom: 0.9rem;
+        }
+
+        &-slide {
+            height: 40.8rem;
+            position: relative;
+
+            &__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &__text {
+                padding: 2.1rem;
+                position: absolute;
+                top: 6.1rem;
+                right: 2rem;
+                width: 31.3rem;
+                background-color: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(0.35rem);
+                border-radius: 0.6rem;
+            }
+
+            &__heading {
+                margin-bottom: 3rem;
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 2.4rem;
+                line-height: 2.9rem;
+                color: #000000;
+            }
+
+            &__description {
+                margin-bottom: 1.8rem;
+                font-weight: 300;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                color: #393939;
+            }
+
+            &__link {
+                left: 50%;
+                transform: translateX(-50%);
+                position: relative;
+                padding: 1rem;
+                width: 18rem;
+            }
+        }
+
+        &-pagination {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.swiper-pagination-bullets {
+                bottom: auto;
+                left: auto;
+            }
+
+            .swiper-pagination-bullet {
+                margin: 0;
+                width: 1.1rem;
+                height: 1.1rem;
+                opacity: 1;
+                background-color: #d9d9d9;
+                transition: background-color .2s ease-in-out;
+
+                &:not(:last-child) {
+                    margin-right: .5rem;
+                }
+
+                &-active {
+                    background-color: #7c7c7c;
+                }
+            }
+        }
+    }
+}

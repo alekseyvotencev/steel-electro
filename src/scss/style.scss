@@ -5,6 +5,14 @@
 @import "header";
 @import "footer";
 
+@import "main-hero";
+
+@import "advantages-section";
+
+@import "stages-section";
+
+@import "qa-section";
+
 @import "news-main";
 
 @import "product-card";
@@ -14,6 +22,8 @@
 @import "description";
 
 @import "other-cities";
+
+@import "news-detail";
 
 html {
     overflow-y: scroll;

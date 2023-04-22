@@ -10,6 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // страница Главная 
+
+    if (document.querySelector('.main-hero__swiper')) {
+        const mainHeroSwiper = new Swiper('.main-hero__swiper', {
+            slidesPerView: 'auto',
+            autoplay: {
+                delay: 3000,
+            },
+            speed: 800,
+            loop: true,
+            spaceBetween: rem(6),
+            pagination: {
+                el: '.main-hero__swiper-pagination'
+            }
+        })
+    }
+
+    // страница Карточка товара
+
     if (document.querySelector('.product-swiper1')) {
         const ariclesSwiper = new Swiper('.product-swiper1', {
             navigation: {
