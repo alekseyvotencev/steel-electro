@@ -1,0 +1,30 @@
+.error {
+    padding-top: 2.8rem;
+    
+    &__text {
+        text-align: center;
+    }
+
+    &__heading {
+        margin-bottom: 3rem;
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 9.6rem;
+        line-height: 11.7rem;
+        color: #000000;
+    }
+
+    &__description {
+        margin-bottom: 3rem;
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 3.5rem;
+        line-height: 4.3rem;
+        color: #000000;
+    }
+
+    &__link {
+        padding: 1.9rem 2.5rem;
+        min-width: 33.6rem;
+    }
+}

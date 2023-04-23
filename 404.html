@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bd3d2e96-cba3-46c0-8f30-c68fa989a9ee&lang=ru_RU"
+        type="text/javascript">
+        </script>
+    <link rel="stylesheet" href="./src/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./src/fonts/fonts.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Страница не найдена</title>
+</head>
+
+<body>
+    @@include('./templates/header.html')
+    <main>
+        <section class="error">
+            <div class="container">
+                <div class="error__text">
+                    <p class="error__heading">404</p>
+                    <p class="error__description">Страница не найдена</p>
+                    <a href="main.html" class="error__link black-btn">На главную</a>
+                </div>
+            </div>
+        </section>
+        @@include('./templates/other-cities.html')
+    </main>
+    @@include('./templates/footer.html')
+</body>
+
+</html>
