@@ -14,16 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.body;
     const html = document.documentElement;
 
-    function closePopupElement(element) {
-        body.classList.remove('lock');
-        body.classList.remove('dark');
-        html.classList.remove('lock');
-        element.classList.remove('active');
-        if (window.innerWidth > 768) {
-            body.style.paddingRight = '0';
-        }
-    }
-
+    // функция открытия попапа
     function openPopupElement(element) {
         if (window.innerWidth > 768) {
             let scrollWidth = (window.innerWidth - body.clientWidth);
@@ -34,6 +25,17 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.add('dark');
         html.classList.add('lock');
         element.classList.add('active');
+    }
+
+    // функция закрытия попапа
+    function closePopupElement(element) {
+        body.classList.remove('lock');
+        body.classList.remove('dark');
+        html.classList.remove('lock');
+        element.classList.remove('active');
+        if (window.innerWidth > 768) {
+            body.style.paddingRight = '0';
+        }
     }
 
     // поиск в хедере
@@ -102,34 +104,71 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // карта в футере
-    ymaps.ready(init);
-    function init() {
-        // Создание карты.
-        var myMap = new ymaps.Map("map", {
-            // Координаты центра карты.
-            // Порядок по умолчанию: «широта, долгота».
-            // Чтобы не определять координаты центра карты вручную,
-            // воспользуйтесь инструментом Определение координат.
-            center: [43.267479, 76.944190],
-            // Уровень масштабирования. Допустимые значения:
-            // от 0 (весь мир) до 19.
-            zoom: 15,
-            controls: []
-        });
 
-        const placemark = new ymaps.Placemark([43.266442, 76.948367], {},
-            {
-                iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: './src/images/svg/map-point.svg',
-                // Размеры метки.
-                iconImageSize: [rem(5), rem(5)],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
-                iconImageOffset: [rem(-2.5), rem(-5)]
-            })
-        myMap.controls.remove('zoomControl');
-        myMap.geoObjects.add(placemark);
+    if (document.querySelector('#map')) {
+        ymaps.ready(init);
+        function init() {
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [43.267479, 76.944190],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 15,
+                controls: []
+            });
+
+            const placemark = new ymaps.Placemark([43.266442, 76.948367], {},
+                {
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: './src/images/svg/map-point.svg',
+                    // Размеры метки.
+                    iconImageSize: [rem(5), rem(5)],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [rem(-2.5), rem(-5)]
+                })
+            myMap.controls.remove('zoomControl');
+            myMap.geoObjects.add(placemark);
+        }
+    }
+
+    // карта на странице КОНТАКТЫ
+    if (document.querySelector('#contacts-map')) {
+
+        ymaps.ready(init);
+        function init() {
+            // Создание карты.
+            var myMap = new ymaps.Map("contacts-map", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [43.259352, 76.942420],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 15,
+                controls: []
+            });
+
+            const placemark = new ymaps.Placemark([43.266442, 76.948367], {},
+                {
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: './src/images/svg/map-point.svg',
+                    // Размеры метки.
+                    iconImageSize: [rem(5), rem(5)],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [rem(-2.5), rem(-5)]
+                })
+            myMap.controls.remove('zoomControl');
+            myMap.geoObjects.add(placemark);
+        }
     }
 
     // табы

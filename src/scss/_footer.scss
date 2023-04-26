@@ -5,6 +5,13 @@
     background-color: $black;
     color: $white;
 
+    &.footer2 {
+        padding-top: 7.2rem;
+        .footer__top {
+            padding-bottom: 6rem;
+        }
+    }
+
     &__top {
         display: flex;
         padding-bottom: 12.5rem;

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bd3d2e96-cba3-46c0-8f30-c68fa989a9ee&lang=ru_RU"
+        type="text/javascript">
+        </script>
+    <link rel="stylesheet" href="./src/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./src/fonts/fonts.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Страница контактов</title>
+</head>
+
+<body>
+    @@include('./templates/header.html')
+    <main>
+
+        <div class="container">
+            <section class="contacts-main">
+                <p class="contacts-main__heading heading1">Контакты</p>
+                <div class="contacts-main__content">
+                    <div class="contacts-main__left">
+                        <div class="contacts-main__left-block">
+                            <p class="contacts-main__left-subheading">Почта</p>
+                            <ul class="contacts-main__left-links">
+                                <li class="contacts-main__left-links__item">
+                                    <a href="mailto:hello@almaty.com">hello@almaty.com</a>
+                                    <button>
+                                        <img src="./src/images/svg/copy.svg" alt="">
+                                    </button>
+                                </li>
+                            </ul>
+                            <p class="contacts-main__left-subheading">Телефон</p>
+                            <ul class="contacts-main__left-links">
+                                <li class="contacts-main__left-links__item">
+                                    <a href="tel:+700000000">+7 000 000 00</a>
+                                    <button>
+                                        <img src="./src/images/svg/copy.svg" alt="">
+                                    </button>
+                                </li>
+                                <li class="contacts-main__left-links__item">
+                                    <a href="tel:+700000000">+7 000 000 00</a>
+                                    <button>
+                                        <img src="./src/images/svg/copy.svg" alt="">
+                                    </button>
+                                </li>
+                            </ul>
+                            <p class="contacts-main__left-subheading">Адрес</p>
+                            <p class="contacts-main__left-text">г. Алматы, ул. Кунаева 21Б, офис 33</p>
+                            <p class="contacts-main__left-subheading">Время работы</p>
+                            <p class="contacts-main__left-text">с 9.00 до 18.00</p>
+                            <p class="contacts-main__left-subheading">Мессенджеры</p>
+                            <ul class="contacts-main__left-social">
+                                <li class="contacts-main__left-social__item">
+                                    <a href="#">
+                                        <img src="./src/images//svg/tg-black.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="contacts-main__left-social__item whatsapp">
+                                    <a href="#">
+                                        <img src="./src/images//svg/whatsapp-black.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="contacts-main__left-social__item">
+                                    <a href="#">
+                                        <img src="./src/images//svg/insta-black.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="contacts-main__heading heading1">Реквизиты</p>
+                        <div class="contacts-main__left-block">
+                            <p class="contacts-main__left-subheading">Название организации</p>
+                            <p class="contacts-main__left-text">Сталь Электро</p>
+                            <p class="contacts-main__left-subheading">Юридический адрес</p>
+                            <p class="contacts-main__left-text">г. Алматы, ул. Кунаева 21Б, офис 33</p>
+                            <p class="contacts-main__left-subheading">Почтовый адрес</p>
+                            <p class="contacts-main__left-text">00000, г. Алматы, ул. Кунаева 21Б, офис 33</p>
+                            <p class="contacts-main__left-subheading light">ИНН:</p>
+                            <p class="contacts-main__left-text">000000000000</p>
+                            <p class="contacts-main__left-subheading light">Расчетный счет</p>
+                            <p class="contacts-main__left-text">000000000000</p>
+                            <p class="contacts-main__left-subheading light">БИК</p>
+                            <p class="contacts-main__left-text">000000000000</p>
+                            <p class="contacts-main__left-subheading light">Банк</p>
+                            <p class="contacts-main__left-text">Название Банка</p>
+                            <a href="#" download class="contacts-main__left-btn black-btn">Скачать реквизиты</a>
+                        </div>
+                    </div>
+                    <div class="contacts-main__right">
+                        <div id="contacts-map"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    @@include('./templates/footer2.html')
+</body>
+
+</html>
