@@ -1,0 +1,31 @@
+.about-location {
+    padding-top: 12rem;
+
+    &__heading {
+        margin-bottom: 6rem;
+        width: 41.1rem;
+        font-size: 3.5rem;
+        line-height: 4.2rem;
+        color: #2f2f2f;
+    }
+
+    &__img {
+        margin: 0 auto;
+        margin-bottom: 6rem;
+        width: 104.7rem;
+        height: 54.9rem;
+        object-fit: contain;
+    }
+
+    &__description {
+        &-text {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            color: #000;
+
+            &:not(:last-child) {
+                margin-bottom: 1.8rem;
+            }
+        }
+    }
+}

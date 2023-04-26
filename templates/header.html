@@ -4,16 +4,26 @@
             <img src="./src/images/svg/logo.svg" alt="">
         </div>
         <div class="header__catalog">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 8H19V9.8H6V8Z" fill="#B7B7B7" />
-                <path d="M6 11.6H19V13.4H6V11.6Z" fill="#B7B7B7" />
-                <path d="M19 15.2H6V17H19V15.2Z" fill="#B7B7B7" />
-            </svg>
-            <p>Каталог</p>
+            <button class="header__catalog-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 8H19V9.8H6V8Z" fill="#B7B7B7" />
+                    <path d="M6 11.6H19V13.4H6V11.6Z" fill="#B7B7B7" />
+                    <path d="M19 15.2H6V17H19V15.2Z" fill="#B7B7B7" />
+                </svg>
+                <p>Каталог</p>
+            </button>
+            @@include('./header-catalog.html')
         </div>
         <div class="header__clients">
             <p>Клиентам</p>
             <img src="./src/images/svg/chevron-down.svg" alt="">
+            <div class="header__clients-dropdown">
+                <ul class="header__clients-dropdown__list">
+                    <li class="header__clients-dropdown__list-item"><a href="#">Контакты</a></li>
+                    <li class="header__clients-dropdown__list-item"><a href="#">Доставка</a></li>
+                    <li class="header__clients-dropdown__list-item"><a href="#">Оплата</a></li>
+                </ul>
+            </div>
         </div>
         <div class="header__search">
             <button class="header__search-btn">
@@ -44,7 +54,7 @@
             <img src="./src/images/svg/chevron-down.svg" alt="">
         </div>
         <div class="header__location">
-            <p>Алматы</p>
+            <button class="header__location-btn">Алматы</button>
         </div>
     </div>
 </header>

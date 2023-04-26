@@ -11,23 +11,24 @@
     <link rel="stylesheet" href="./src/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./src/fonts/fonts.css">
     <link rel="stylesheet" href="./src/css/main.css">
-    <title>Страница не найдена</title>
+    <title>Главная города</title>
 </head>
 
 <body>
     @@include('./templates/header.html')
     <main>
         <div class="container">
-            <section class="error">
-                <div class="container">
-                    <div class="error__text">
-                        <p class="error__heading">404</p>
-                        <p class="error__description">Страница не найдена</p>
-                        <a href="main.html" class="error__link black-btn">На главную</a>
-                    </div>
+            <div class="main-container">
+                <div class="city-main__left">
+                    @@include('./templates/categories-menu.html')
                 </div>
-            </section>
-            @@include('./templates/other-cities.html')
+                <div class="city-main__right">
+                    @@include('./templates/advantages-section.html')
+                    @@include('./templates/stages-section.html')
+                    @@include('./templates/qa-section.html')
+                    @@include('./templates/description.html')
+                </div>
+            </div>
         </div>
     </main>
     @@include('./templates/footer.html')

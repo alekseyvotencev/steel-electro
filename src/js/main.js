@@ -10,10 +10,58 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    const header = document.querySelector('header');
+    const body = document.body;
+    const html = document.documentElement;
+
+    function closePopupElement(element) {
+        body.classList.remove('lock');
+        body.classList.remove('dark');
+        html.classList.remove('lock');
+        element.classList.remove('active');
+        if (window.innerWidth > 768) {
+            body.style.paddingRight = '0';
+        }
+    }
+
+    function openPopupElement(element) {
+        if (window.innerWidth > 768) {
+            let scrollWidth = (window.innerWidth - body.clientWidth);
+            body.style.paddingRight = `${scrollWidth}px`;
+        }
+
+        body.classList.add('lock');
+        body.classList.add('dark');
+        html.classList.add('lock');
+        element.classList.add('active');
+    }
+
     // поиск в хедере
-    const headerSearch = document.querySelector('.header__search')
+    const headerSearch = document.querySelector('.header__search');
     headerSearch.addEventListener('click', function () {
 
+    })
+
+    // город в хедере
+    const headerLocationBtn = document.querySelector('.header__location-btn');
+    const locationChoice = document.querySelector('.choose-city');
+    const locationChoiceClose = locationChoice.querySelector('.choose-city__close');
+    headerLocationBtn.addEventListener('click', function () {
+        openPopupElement(locationChoice)
+    })
+    locationChoiceClose.addEventListener('click', function () {
+        closePopupElement(locationChoice);
+    })
+
+    // каталог в хедере
+    const catalogBtnOpen = header.querySelector('.header__catalog-btn');
+    const catalog = header.querySelector('.header__catalog-popup');
+    const catalogBtnClose = header.querySelector('.header__catalog-close');
+    catalogBtnOpen.addEventListener('click', function () {
+        openPopupElement(catalog)
+    })
+    catalogBtnClose.addEventListener('click', function () {
+        closePopupElement(catalog)
     })
 
     // секция Вопросы и ответы
@@ -24,6 +72,25 @@ document.addEventListener('DOMContentLoaded', function () {
             btn.addEventListener('click', function () {
                 btn.classList.toggle('active');
                 let content = btn.nextElementSibling;
+                content.classList.toggle('active');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null
+                } else {
+                    content.style.maxHeight = content.scrollHeight / 10 + "rem";
+                }
+            })
+        })
+    }
+
+    // аккордеоны
+
+    if (document.querySelector('.acc-item')) {
+        const accItems = document.querySelectorAll('.acc-item');
+        accItems.forEach(item => {
+            const accHead = item.querySelector(('.acc-head'));
+            accHead.addEventListener('click', function () {
+                accHead.classList.toggle('active');
+                let content = accHead.nextElementSibling;
                 content.classList.toggle('active');
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null
