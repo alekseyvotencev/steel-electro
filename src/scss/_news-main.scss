@@ -21,6 +21,7 @@
 
         &-item {
             display: flex;
+            align-items: flex-start;
             color: #000000;
 
             &:not(:last-child) {

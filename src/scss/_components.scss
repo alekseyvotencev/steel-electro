@@ -27,6 +27,81 @@ $black: #2c2a2c;
                 font-weight: 400;
             }
         }
+
+        &-link {
+            padding: 0.2rem;
+        }
+
+        &-btn {
+            padding: 0.2rem 0.4rem 0.2rem 0.7rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition-property: background-color, box-shadow;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $white;
+                z-index: 3;
+                opacity: 0;
+                transition: opacity 0.2s ease-in-out;
+            }
+
+            span {
+                z-index: 4;
+            }
+
+            img {
+                width: 1.7rem;
+                height: 1.7rem;
+                object-fit: contain;
+                z-index: 4;
+            }
+
+            &:hover {
+                background-color: $white;
+                box-shadow: 1px 1px 0.6rem 0.2rem rgba(0, 0, 0, 0.2);
+
+                &::after {
+                    opacity: 1;
+                }
+
+                .breadcrumbs__item-dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &-dropdown {
+            padding: 1rem 0.8rem 1rem 0.7rem;
+            position: absolute;
+            top: calc(100%);
+            left: 0;
+            width: 100%;
+            background-color: $white;
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: 1px 1px 0.6rem 0.2rem rgba(0, 0, 0, 0.2);
+            transition-property: opacity, visibility;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+
+            &__list {
+                &-item {
+                    &:not(:last-child) {
+                        margin-bottom: 0.6rem;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -52,12 +127,33 @@ $black: #2c2a2c;
         font-family: "Montserrat";
         font-size: 2rem;
         line-height: 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         background-color: $white;
         border-radius: 3rem;
         transition-property: color, background-color;
         transition-duration: 0.2s;
         transition-timing-function: ease-in-out;
+
+        span {
+            transform: translateX(0.9rem);
+            transition-property: transform;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+        }
+
+        svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            object-fit: contain;
+            opacity: 0;
+            visibility: hidden;
+            transition-property: opacity, visibility;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+        }
 
         &:not(:last-child) {
             margin-right: 2rem;
@@ -66,6 +162,15 @@ $black: #2c2a2c;
         &.active {
             background-color: $black;
             color: $white;
+
+            span {
+                transform: translateX(0);
+            }
+
+            svg {
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 }

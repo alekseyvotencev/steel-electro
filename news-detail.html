@@ -17,8 +17,19 @@
 <body>
     @@include('./templates/header.html')
     <main>
-        <section class="news-detail">
-            <div class="container">
+        <div class="container">
+            <section class="news-detail">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__item-link">Металлопрокат в Астане</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__item-link">Пресс-центр</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__item-link">Аналитика цен</a>
+                    </li>
+                </ul>
                 <p class="news-detail__heading heading1">Аналитика цен</p>
                 <div class="news-detail__content">
                     <div class="news-detail__left">
@@ -79,9 +90,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
     </main>
     @@include('./templates/footer.html')
 </body>

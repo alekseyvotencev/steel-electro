@@ -17,8 +17,8 @@
 <body>
     @@include('./templates/header.html')
     <main>
-        <section class="product-card">
-            <div class="container">
+        <div class="container">
+            <section class="product-card">
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs__item">
                         <a href="#" class="breadcrumbs__item-link">Главная</a>
@@ -37,6 +37,13 @@
                 <div class="product-card__content">
                     <img src="./src/images/product-card-img.png" alt="" class="product-card__img">
                     <div class="product-card__center">
+                        <p class="product-card__center-heading">
+                            Характеристики Арматура 6 A3, длина 6 м, марка A500C
+                        </p>
+                        <button class="product-card__center-btn">
+                            <span>Характеристики</span>
+                            <img src="./src/images/svg/chevron-left.svg" alt="">
+                        </button>
                         <ul class="product-card__center-list">
                             <li class="product-card__center-list__item">
                                 <p class="product-card__center-list__item-heading">Размер</p>
@@ -112,19 +119,18 @@
                     </div>
 
                 </div>
-            </div>
-        </section>
-        @@include('./templates/product-swiper1.html')
-        @@include('./templates/product-swiper2.html')
-        <div class="product__links">
-            <div class="container">
+            </section>
+            @@include('./templates/product-swiper1.html')
+            @@include('./templates/product-swiper2.html')
+
+            <div class="product__links">
                 <a href="#" class="product__links-prev black-btn">Предыдущий товар</a>
                 <a href="#" class="product__links-next black-btn">Следующий товар</a>
             </div>
 
+            @@include('./templates/description.html')
+            @@include('./templates/other-cities.html')
         </div>
-        @@include('./templates/description.html')
-        @@include('./templates/other-cities.html')
     </main>
     @@include('./templates/footer.html')
 </body>

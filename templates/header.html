@@ -1,20 +1,40 @@
 <header class="header">
     <div class="container">
+        <button class="header__burger mobile">
+            <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.95215 2.56836H23.3807" stroke="#21252C" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path d="M1.95215 10.4434H23.3807" stroke="#21252C" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path d="M1.95215 18.3184H23.3807" stroke="#21252C" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </button>
         <div class="header__logo">
-            <img src="./src/images/svg/logo.svg" alt="">
+            <a href="#"><img src="./src/images/svg/logo.svg" alt=""></a>
         </div>
-        <div class="header__catalog">
+        <div class="header__catalog desktop">
             <button class="header__catalog-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="desktop">
                     <path d="M6 8H19V9.8H6V8Z" fill="#B7B7B7" />
                     <path d="M6 11.6H19V13.4H6V11.6Z" fill="#B7B7B7" />
                     <path d="M19 15.2H6V17H19V15.2Z" fill="#B7B7B7" />
                 </svg>
-                <p>Каталог</p>
+                <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="mobile">
+                    <path d="M1.95215 10.4434H23.3807" stroke="#2C2A2C" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M1.95215 2.56836H23.3807" stroke="#2C2A2C" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M1.95215 18.3184H23.3807" stroke="#2C2A2C" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+                <p class="desktop">Каталог</p>
             </button>
-            @@include('./header-catalog.html')
+
         </div>
-        <div class="header__clients">
+        <div class="header__clients desktop">
             <p>Клиентам</p>
             <img src="./src/images/svg/chevron-down.svg" alt="">
             <div class="header__clients-dropdown">
@@ -43,18 +63,114 @@
             <form action="#" class="header__search-form">
                 <input type="search" placeholder="Найти товар ..." class="header__search-form__input">
             </form>
+            <button class="header__search-clear">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M18 18L6 6.00001" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
         </div>
         <div class="header__shopping-cart">
             <button>
-                <img src="./src/images/svg/shopping-cart.svg" alt="">
+                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.8438 20.8438H7.90703L4.74648 3.46641C4.70951 3.2583 4.60095 3.06967 4.4396 2.93314C4.27824 2.79661 4.07424 2.72077 3.86289 2.71875H1.8125"
+                        stroke="#7A7A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M9.0625 25.375C10.3138 25.375 11.3281 24.3606 11.3281 23.1094C11.3281 21.8581 10.3138 20.8438 9.0625 20.8438C7.81123 20.8438 6.79688 21.8581 6.79688 23.1094C6.79688 24.3606 7.81123 25.375 9.0625 25.375Z"
+                        stroke="#7A7A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M20.8438 25.375C22.095 25.375 23.1094 24.3606 23.1094 23.1094C23.1094 21.8581 22.095 20.8438 20.8438 20.8438C19.5925 20.8438 18.5781 21.8581 18.5781 23.1094C18.5781 24.3606 19.5925 25.375 20.8438 25.375Z"
+                        stroke="#7A7A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M7.08008 16.3125H21.3082C21.7318 16.3138 22.1424 16.1657 22.4676 15.8943C22.7929 15.6229 23.0121 15.2455 23.0867 14.8285L24.4688 7.25H5.4375"
+                        stroke="#7A7A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </button>
         </div>
-        <div class="header__contacts">
+        <button class="header__call mobile">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14.5" cy="14.5" r="14" stroke="#2C2A2C" />
+                <path
+                    d="M11.3543 12.1615C12.0167 13.5412 12.9198 14.8343 14.0634 15.9779C15.207 17.1216 16.5002 18.0246 17.8799 18.6871C17.9986 18.744 18.0579 18.7725 18.133 18.7944C18.3998 18.8722 18.7275 18.8163 18.9535 18.6545C19.0171 18.609 19.0715 18.5546 19.1803 18.4458C19.513 18.113 19.6794 17.9467 19.8467 17.8379C20.4776 17.4277 21.291 17.4277 21.9219 17.8379C22.0892 17.9467 22.2556 18.113 22.5883 18.4458L22.7738 18.6313C23.2796 19.1371 23.5325 19.39 23.6699 19.6616C23.9431 20.2018 23.9431 20.8397 23.6699 21.3799C23.5325 21.6516 23.2796 21.9045 22.7738 22.4103L22.6238 22.5603C22.1197 23.0644 21.8676 23.3165 21.525 23.5089C21.1447 23.7225 20.5542 23.8761 20.118 23.8748C19.725 23.8737 19.4564 23.7974 18.9192 23.6449C16.032 22.8255 13.3077 21.2793 11.0348 19.0065C8.76201 16.7337 7.21586 14.0093 6.3964 11.1222C6.24392 10.585 6.16768 10.3163 6.16651 9.92331C6.16521 9.48718 6.3188 8.89661 6.53239 8.51637C6.72489 8.1737 6.97693 7.92165 7.48102 7.41757L7.63105 7.26754C8.13687 6.76172 8.38978 6.50881 8.6614 6.37143C9.20159 6.0982 9.83954 6.0982 10.3797 6.37142C10.6514 6.50881 10.9043 6.76172 11.4101 7.26753L11.5956 7.45301C11.9283 7.78576 12.0947 7.95213 12.2035 8.11943C12.6137 8.75036 12.6137 9.56374 12.2035 10.1947C12.0947 10.362 11.9283 10.5283 11.5956 10.8611C11.4868 10.9699 11.4324 11.0243 11.3868 11.0879C11.225 11.3139 11.1691 11.6415 11.2469 11.9084C11.2688 11.9834 11.2973 12.0428 11.3543 12.1615Z"
+                    stroke="#2C2A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="header__contacts desktop">
             <p>Контакты</p>
             <img src="./src/images/svg/chevron-down.svg" alt="">
+            <div class="header__contacts-dropdown">
+                <div class="header__contacts-dropdown__btns">
+                    <button data-path="contacts" class="active">Контакты</button>
+                    <button data-path="requisites">Реквизиты</button>
+                </div>
+                <div class="header__contacts-dropdown__block active">
+                    <p class="header__contacts-dropdown__subheading">Телефон</p>
+                    <div class="header__contacts-dropdown__links">
+                        <div class="header__contacts-dropdown__link">
+                            <a href="tel:+700000000">+7 000 000 00</a>
+                            <button>
+                                <img src="./src/images/svg/copy.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="header__contacts-dropdown__link">
+                            <a href="tel:+700000000">+7 000 000 00</a>
+                            <button>
+                                <img src="./src/images/svg/copy.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="header__contacts-dropdown__call black-btn">Обратный звонок</button>
+                    <div class="line"></div>
+                    <p class="header__contacts-dropdown__subheading">Почта</p>
+                    <div class="header__contacts-dropdown__link">
+                        <a href="mailto:hello@almaty.com">hello@almaty.com</a>
+                        <button>
+                            <img src="./src/images/svg/copy.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="line"></div>
+                    <p class="header__contacts-dropdown__subheading">Мессенджеры</p>
+                    <ul class="header__contacts-dropdown__social">
+                        <li class="header__contacts-dropdown__social-item">
+                            <a href="#"><img src="./src/images/svg/tg-black.svg" alt=""></a>
+                        </li>
+                        <li class="header__contacts-dropdown__social-item">
+                            <a href="#"><img src="./src/images/svg/whatsapp-black.svg" alt=""></a>
+                        </li>
+                    </ul>
+                    <div class="line"></div>
+                    <p class="header__contacts-dropdown__subheading">Адрес</p>
+                    <p class="header__contacts-dropdown__text">г. Алматы, ул. Кунаева 21Б, офис 33</p>
+                    <a href="#" class="header__contacts-dropdown__map black-btn">Посмотреть на карте</a>
+                </div>
+                <div class="header__contacts-dropdown__block">
+                    <p class="header__contacts-dropdown__subheading">Название организации</p>
+                    <p class="header__contacts-dropdown__text">Сталь Электро</p>
+                    <div class="line"></div>
+                    <p class="header__contacts-dropdown__subheading">Юридический адрес</p>
+                    <p class="header__contacts-dropdown__text">г. Алматы, ул. Кунаева 21Б, офис 33</p>
+                    <div class="line"></div>
+                    <p class="header__contacts-dropdown__subheading">Почтовый адрес</p>
+                    <p class="header__contacts-dropdown__text">00000, г. Алматы, ул. Кунаева 21Б, офис 33</p>
+                    <div class="line"></div>
+                    <p class="header__contacts-dropdown__subsubheading">ИНН:</p>
+                    <p class="header__contacts-dropdown__text">000000000000</p>
+                    <p class="header__contacts-dropdown__subsubheading">Расчетный счет</p>
+                    <p class="header__contacts-dropdown__text">000000000000</p>
+                    <p class="header__contacts-dropdown__subsubheading">БИК</p>
+                    <p class="header__contacts-dropdown__text">000000000000</p>
+                    <p class="header__contacts-dropdown__subsubheading">Банк</p>
+                    <p class="header__contacts-dropdown__text">Название Банка</p>
+                    <a href="#" download class="header__contacts-dropdown__download">Скачать реквизиты</a>
+                </div>
+            </div>
         </div>
-        <div class="header__location">
+        <div class="header__location desktop">
             <button class="header__location-btn">Алматы</button>
         </div>
     </div>
+    @@include('./header-mobile-menu.html')
+    @@include('./header-catalog.html')
+    @@include('./header-menu-bottom.html')
 </header>

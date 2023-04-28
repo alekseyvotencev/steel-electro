@@ -1,8 +1,8 @@
-<div class="header__catalog-popup">
+<div class="header__catalog-popup" data-target="catalog">
     <div class="header__catalog-popup__step1">
         <div class="header__catalog-popup__step1-top">
             <p>Каталог</p>
-            <button class="header__catalog-close">
+            <button class="header__catalog-close desktop">
                 <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M6.70871 6.54199L12.3932 0.586824C12.5213 0.45259 12.5213 0.234953 12.3932 0.100719C12.265 -0.0335157 12.0573 -0.0335157 11.9291 0.100719L6.24466 6.05584L0.560181 0.100676C0.432048 -0.0335586 0.224304 -0.0335586 0.0961714 0.100676C-0.0320025 0.23491 -0.0320025 0.452547 0.0961714 0.586781L5.78061 6.54199L0.0961304 12.4972C-0.0320435 12.6314 -0.0320435 12.849 0.0961304 12.9833C0.160197 13.0504 0.244156 13.084 0.328156 13.084C0.412156 13.084 0.496115 13.0504 0.560181 12.9833L6.24466 7.02814L11.9291 12.9833C11.9932 13.0504 12.0772 13.084 12.1612 13.084C12.2452 13.084 12.3291 13.0504 12.3932 12.9833C12.5213 12.849 12.5213 12.6314 12.3932 12.4972L6.70871 6.54199Z"
@@ -19,26 +19,66 @@
                 <p>Черный прокат</p>
                 <img src="./src/images/svg/chevron-right.svg" alt="">
                 <div class="header__catalog-popup__step2">
+                    <p class="header__catalog-popup__step2-heading mobile">Черный прокат</p>
+                    <div class="header__catalog-popup__step2-search mobile">
+                        <input type="text">
+                        <img src="./src/images/svg/search.svg" alt="">
+                    </div>
                     <ul class="header__catalog-popup__step2-list">
                         <li class="header__catalog-popup__step2-list-item">
                             <p>Черный прокат</p>
                             <img src="./src/images/svg/chevron-right.svg" alt="">
                             <div class="header__catalog-popup__step3">
+                                <button class="header__catalog-popup__step3-back mobile">
+                                    <img src="./src/images/svg/chevron-left.svg" alt="">
+                                    <span>Черный прокат</span>
+                                </button>
+                                <div class="header__catalog-popup__step3-search mobile">
+                                    <input type="text">
+                                    <img src="./src/images/svg/search.svg" alt="">
+                                </div>
                                 <ul class="header__catalog-popup__step3-list">
                                     <li class="header__catalog-popup__step3-list-item">
                                         <p>Черный прокат</p>
                                         <img src="./src/images/svg/chevron-right.svg" alt="">
                                         <div class="header__catalog-popup__step4">
+                                            <button class="header__catalog-popup__step4-back mobile">
+                                                <img src="./src/images/svg/chevron-left.svg" alt="">
+                                                <span>Черный прокат</span>
+                                            </button>
+                                            <div class="header__catalog-popup__step4-search mobile">
+                                                <input type="text">
+                                                <img src="./src/images/svg/search.svg" alt="">
+                                            </div>
                                             <ul class="header__catalog-popup__step4-list">
                                                 <li class="header__catalog-popup__step4-list-item">
                                                     <p>Черный прокат</p>
                                                     <img src="./src/images/svg/chevron-right.svg" alt="">
                                                     <div class="header__catalog-popup__step5">
+                                                        <button class="header__catalog-popup__step5-back mobile">
+                                                            <img src="./src/images/svg/chevron-left.svg" alt="">
+                                                            <span>Черный прокат</span>
+                                                        </button>
+                                                        <div class="header__catalog-popup__step5-search mobile">
+                                                            <input type="text">
+                                                            <img src="./src/images/svg/search.svg" alt="">
+                                                        </div>
                                                         <ul class="header__catalog-popup__step5-list">
                                                             <li class="header__catalog-popup__step5-list-item">
                                                                 <p>Черный прокат</p>
                                                                 <img src="./src/images/svg/chevron-right.svg" alt="">
                                                                 <div class="header__catalog-popup__step6">
+                                                                    <button
+                                                                        class="header__catalog-popup__step6-back mobile">
+                                                                        <img src="./src/images/svg/chevron-left.svg"
+                                                                            alt="">
+                                                                        <span>Черный прокат</span>
+                                                                    </button>
+                                                                    <div
+                                                                        class="header__catalog-popup__step6-search mobile">
+                                                                        <input type="text">
+                                                                        <img src="./src/images/svg/search.svg" alt="">
+                                                                    </div>
                                                                     <ul class="header__catalog-popup__step6-list">
                                                                         <li
                                                                             class="header__catalog-popup__step6-list-item">
@@ -1126,6 +1166,7 @@
                                         </div>
                                     </li>
                                 </ul>
+                                <a href="#" class="black-btn header__catalog-popup__step3-link">Перейти в категорию</a>
                             </div>
                         </li>
                         <li class="header__catalog-popup__step2-list-item">
@@ -2927,6 +2968,7 @@
                 <p>Цветной прокат</p>
                 <img src="./src/images/svg/chevron-right.svg" alt="">
                 <div class="header__catalog-popup__step2">
+                    <p class="header__catalog-popup__step2-heading mobile">Черный прокат</p>
                     <ul class="header__catalog-popup__step2-list">
                         <li class="header__catalog-popup__step2-list-item">
                             <p>Черный прокат</p>
@@ -3119,6 +3161,7 @@
                 <p>Чугунный прокат</p>
                 <img src="./src/images/svg/chevron-right.svg" alt="">
                 <div class="header__catalog-popup__step2">
+                    <p class="header__catalog-popup__step2-heading mobile">Черный прокат</p>
                     <ul class="header__catalog-popup__step2-list">
                         <li class="header__catalog-popup__step2-list-item">
                             <p>Черный прокат</p>
@@ -3311,6 +3354,7 @@
                 <p>Нержавеющий прокат</p>
                 <img src="./src/images/svg/chevron-right.svg" alt="">
                 <div class="header__catalog-popup__step2">
+                    <p class="header__catalog-popup__step2-heading mobile">Черный прокат</p>
                     <ul class="header__catalog-popup__step2-list">
                         <li class="header__catalog-popup__step2-list-item">
                             <p>Черный прокат</p>
@@ -3503,6 +3547,7 @@
                 <p>Качественные стали</p>
                 <img src="./src/images/svg/chevron-right.svg" alt="">
                 <div class="header__catalog-popup__step2">
+                    <p class="header__catalog-popup__step2-heading mobile">Черный прокат</p>
                     <ul class="header__catalog-popup__step2-list">
                         <li class="header__catalog-popup__step2-list-item">
                             <p>Черный прокат</p>
@@ -3695,6 +3740,7 @@
                 <p>Цветной прокат</p>
                 <img src="./src/images/svg/chevron-right.svg" alt="">
                 <div class="header__catalog-popup__step2">
+                    <p class="header__catalog-popup__step2-heading mobile">Черный прокат</p>
                     <ul class="header__catalog-popup__step2-list">
                         <li class="header__catalog-popup__step2-list-item">
                             <p>Черный прокат</p>
@@ -3885,5 +3931,4 @@
             </li>
         </ul>
     </div>
-
 </div>
