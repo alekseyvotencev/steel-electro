@@ -123,6 +123,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function getMinusStepMenu(btn) {
+        btn.addEventListener('click', function () {
+            btn.parentElement.classList.remove('active');
+        })
+    }
+
     // step1
     const headerStep1Items = header.querySelectorAll('.header__catalog-popup__step1-list-item');
     headerStep1Items.forEach(item => {
@@ -142,12 +148,9 @@ document.addEventListener('DOMContentLoaded', function () {
         getMenuAnimation(item, item.querySelector('.header__catalog-popup__step4'), item.querySelector('.header__catalog-popup__step3-list-item-btn'));
     })
 
-    const headerStep3Back = header.querySelectorAll('.header__catalog-popup__step3-back');
-    headerStep3Back.forEach(btn => {
-        btn.addEventListener('click', function () {
-            btn.parentElement.classList.remove('active');
-
-        })
+    const headerStep3BackBtns = header.querySelectorAll('.header__catalog-popup__step3-back');
+    headerStep3BackBtns.forEach(btn => {
+        getMinusStepMenu(btn);
     })
 
     // step4
@@ -156,9 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
         getMenuAnimation(item, item.querySelector('.header__catalog-popup__step5'), item.querySelector('.header__catalog-popup__step4-list-item-btn'));
     })
 
-    const headerStep4Back = header.querySelector('.header__catalog-popup__step4-back');
-    headerStep4Back.addEventListener('click', function () {
-        headerStep4Back.parentElement.classList.remove('active');
+    const headerStep4BackBtns = header.querySelectorAll('.header__catalog-popup__step4-back');
+    headerStep4BackBtns.forEach(btn => {
+        getMinusStepMenu(btn);
     })
 
     // step5
@@ -167,17 +170,17 @@ document.addEventListener('DOMContentLoaded', function () {
         getMenuAnimation(item, item.querySelector('.header__catalog-popup__step6'), item.querySelector('.header__catalog-popup__step5-list-item-btn'));
     })
 
-    const headerStep5Back = header.querySelector('.header__catalog-popup__step5-back');
-    headerStep5Back.addEventListener('click', function () {
-        headerStep5Back.parentElement.classList.remove('active');
+    const headerStep5BackBtns = header.querySelectorAll('.header__catalog-popup__step5-back');
+    headerStep5BackBtns.forEach(btn => {
+        getMinusStepMenu(btn);
     })
 
     // step6 
-
-    const headerStep6Back = header.querySelector('.header__catalog-popup__step6-back');
-    headerStep6Back.addEventListener('click', function () {
-        headerStep6Back.parentElement.classList.remove('active');
+    const headerStep6BackBtns = header.querySelectorAll('.header__catalog-popup__step6-back');
+    headerStep6BackBtns.forEach(btn => {
+        getMinusStepMenu(btn);
     })
+
 
 
     // город в хедере
