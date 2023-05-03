@@ -1,5 +1,5 @@
 .qa-section {
-    padding-top: 12rem;
+    margin-top: 12rem;
 
     &__heading {
         margin-bottom: 4rem;
@@ -46,10 +46,16 @@
             &__content {
                 max-height: 0;
                 overflow: hidden;
-                transition: max-height 0.3s ease-in-out, margin 0.3s ease-in-out;
+                opacity: 0;
+                visibility: hidden;
+                transition-property: max-height, margin, opacity, visibility;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-in-out;
 
                 &.active {
                     margin-top: 4rem;
+                    opacity: 1;
+                    visibility: visible;
                 }
 
                 p {
@@ -57,6 +63,34 @@
                     font-size: 1.8rem;
                     line-height: 2.3rem;
                     color: rgba($color: #282828, $alpha: 0.8);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        &__list {
+            &-item {
+                border-width: 0.2rem;
+
+                &__head {
+                    p {
+                        font-size: 3.2rem;
+                        line-height: 3.8rem;
+                    }
+
+                    img {
+                        width: 3.8rem;
+                        height: 3.8rem;
+                    }
+                }
+
+                &__content {
+                    p {
+                        width: 100%;
+                        font-size: 2.8rem;
+                        line-height: 3.6rem;
+                    }
                 }
             }
         }

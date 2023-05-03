@@ -322,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let content = document.querySelector('.product-card__center-list');
         productOptionsBtn.addEventListener('click', function () {
             productOptionsBtn.classList.toggle('active');
+            content.classList.toggle('active');
             if (content.style.maxHeight) {
                 content.style.maxHeight = null
             } else {
@@ -330,6 +331,35 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    // описание на странице КАРТОЧКА ТОВАРА
+    if (document.querySelector('.description__btn')) {
+        let descriptionBtn = document.querySelector('.description__btn');
+        let content = descriptionBtn.nextElementSibling;
+        descriptionBtn.addEventListener('click', function () {
+            descriptionBtn.classList.toggle('active');
+            content.classList.toggle('active');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null
+            } else {
+                content.style.maxHeight = content.scrollHeight / 10 + "rem";
+            }
+        })
+    }
+
+    // категории на странице РЕЗУЛЬТАТЫ ПОИСКА мобилка
+    if (document.querySelector('.search-result__left-categories') && window.innerWidth <= 768) {
+        const searchCategoriesBtn = document.querySelector('.search-result__left-categories__top');
+        searchCategoriesBtn.addEventListener('click', function () {
+            searchCategoriesBtn.classList.toggle('active');
+            let content = searchCategoriesBtn.nextElementSibling;
+            content.classList.toggle('active');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null
+            } else {
+                content.style.maxHeight = content.scrollHeight / 10 + "rem";
+            }
+        })
+    }
 
     // карта на странице КОНТАКТЫ
     if (document.querySelector('#contacts-map')) {

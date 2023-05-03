@@ -119,4 +119,110 @@
             }
         }
     }
+
+    @media (max-width: 48em) {
+        &__heading {
+            margin-bottom: 6rem;
+        }
+
+        &__content {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &__left {
+            width: 100%;
+
+            &-block {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+                border-width: 0.2rem;
+
+                &:not(:last-child) {
+                    margin-bottom: 12rem;
+                }
+            }
+
+            &-subheading {
+                margin-bottom: 1.8rem;
+                font-size: 2.8rem;
+                line-height: 3.4rem;
+            }
+
+            &-links {
+                margin-bottom: 6rem;
+
+                &__item {
+                    justify-content: space-between;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1.6rem;
+                    }
+
+                    a {
+                        margin-right: 0;
+                        font-size: 3.6rem;
+                        line-height: 4.6rem;
+                    }
+
+                    button {
+                        img {
+                            width: 4rem;
+                            height: 4rem;
+                        }
+                    }
+                }
+            }
+
+            &-text {
+                margin-bottom: 6rem;
+                font-size: 3.6rem;
+                line-height: 4.6rem;
+            }
+
+            &-social {
+                margin-bottom: 6rem;
+
+                &__item {
+                    &:not(:last-child) {
+                        margin-right: 1.6rem;
+                    }
+
+                    a {
+                        img {
+                            width: 6rem;
+                            height: 6rem;
+                        }
+                    }
+
+                    &.whatsapp {
+                        a {
+                            img {
+                                width: 6.5rem;
+                                height: 6.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-btn {
+                padding: 3.8rem;
+                width: 100%;
+            }
+
+            #contacts-map {
+                margin-left: -1rem;
+                width: 60.8rem;
+                height: 35.8rem;
+
+                [class*="ymaps-2"][class*="-ground-pane"] {
+                    // filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+                    /* Firefox 3.5+ */
+                    -webkit-filter: grayscale(100%);
+                    /* Chrome 19+ & Safari 6+ */
+                }
+            }
+        }
+    }
 }

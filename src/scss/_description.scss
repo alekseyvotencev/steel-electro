@@ -8,9 +8,70 @@
     &__text {
         font-size: 1.8rem;
         line-height: 2.3rem;
-        
+
         &:not(:last-of-type) {
             margin-bottom: 2.3rem;
+        }
+    }
+
+    @media (max-width: 48em) {
+        &__btn {
+            padding: 1.8rem;
+            width: 100%;
+            height: 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0.2rem solid $gray;
+
+            &.active {
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+
+            span {
+                margin-right: 4.8rem;
+                font-size: 3.2rem;
+                line-height: 4rem;
+                color: #000;
+            }
+
+            img {
+                width: 3.4rem;
+                height: 3.4rem;
+                object-fit: contain;
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+
+        &__content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition-property: max-height, margin, opacity, visibility;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+
+            &.active {
+                margin-top: 4rem;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &__heading {
+            margin-bottom: 4rem;
+        }
+
+        &__text {
+            font-size: 3.2rem;
+            line-height: 4.2rem;
+
+            &:not(:last-of-type) {
+                margin-bottom: 3.2rem;
+            }
         }
     }
 }

@@ -183,4 +183,129 @@
             }
         }
     }
+
+    @media (max-width: 48em) {
+        margin-top: 12rem;
+        flex-direction: column-reverse;
+
+        &__left {
+            margin-top: 0;
+            width: 100%;
+
+            &-heading {
+                margin-bottom: 1.4rem;
+            }
+
+            &-form {
+                &__input {
+                    padding-top: 2rem;
+                    padding-bottom: 2rem;
+                    font-size: 2.2rem;
+                    line-height: 2.6rem;
+                    letter-spacing: 1px;
+                    border-width: 0.2rem;
+
+                    &::placeholder {
+                        letter-spacing: 1px;
+                    }
+
+                    &:not(:last-of-type) {
+                        margin-bottom: 5.4rem;
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 8rem;
+                    }
+                }
+
+                &__label {
+                    margin-bottom: 8rem;
+                    padding-left: 5rem;
+
+                    &-checkbox {
+                        width: 4rem;
+                        height: 4rem;
+                        border-width: 0.2rem;
+
+                        &::after {
+                            width: 3rem;
+                            height: 2rem;
+                        }
+                    }
+
+                    &-span {
+                        font-size: 2.8rem;
+                        line-height: 4rem;
+                        color: #222222;
+
+                        a {
+                            color: #231f20;
+                            text-underline-offset: .6rem;
+                        }
+                    }
+                }
+
+                &__btn {
+                    padding: 3.8rem;
+                    min-width: auto;
+                    width: 100%;
+                }
+            }
+        }
+
+        &__swiper {
+            margin-bottom: 6rem;
+            width: 100%;
+
+            .swiper-wrapper {
+                margin-bottom: 2rem;
+            }
+
+            &-slide {
+                height: 79.2rem;
+
+                &__text {
+                    padding: 3.6rem;
+                    position: absolute;
+                    top: auto;
+                    right: auto;
+                    bottom: 2.6rem;
+                    left: 50%;
+                    width: 55.8rem;
+                    border-radius: 1.2rem;
+                    transform: translateX(-50%);
+                }
+
+                &__heading {
+                    font-size: 4rem;
+                    line-height: 4.8rem;
+                }
+
+                &__description {
+                    margin-bottom: 3rem;
+                    font-size: 2.4rem;
+                    line-height: 3rem;
+                }
+
+                &__link {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: relative;
+                    padding: 2rem;
+                    width: 50rem;
+                }
+            }
+
+            &-pagination {
+                .swiper-pagination-bullet {
+                    width: 1.4rem;
+                    height: 1.4rem;
+
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
 }

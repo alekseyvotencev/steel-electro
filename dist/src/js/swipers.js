@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // страница Карточка товара
 
     if (document.querySelector('.product-swiper1')) {
-        const ariclesSwiper = new Swiper('.product-swiper1', {
+        const ariclesSwiper1 = new Swiper('.product-swiper1', {
             navigation: {
                 nextEl: '.product-swiper1__container .next',
                 prevEl: '.product-swiper1__container .prev',
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             breakpoints: {
                 320: {
                     slidesPerView: 'auto',
-                    spaceBetween: rem(1.6),
+                    spaceBetween: rem(3.6),
                 },
                 769: {
                     slidesPerView: 3,
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (document.querySelector('.product-swiper2')) {
-        const ariclesSwiper = new Swiper('.product-swiper2', {
+        const ariclesSwiper2 = new Swiper('.product-swiper2', {
             navigation: {
                 nextEl: '.product-swiper2__container .next',
                 prevEl: '.product-swiper2__container .prev',
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
             breakpoints: {
                 320: {
                     slidesPerView: 'auto',
-                    spaceBetween: rem(1.6),
+                    spaceBetween: rem(3.6),
                 },
                 769: {
                     slidesPerView: 3,

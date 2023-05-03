@@ -17,4 +17,17 @@
             }
         }
     }
+
+    @media (max-width: 48em) {
+        &__heading {
+            margin-bottom: 4rem;
+        }
+
+        &__list {
+            &-item {
+                margin-bottom: 1.4rem;
+                margin-right: 3.4rem;
+            }
+        }
+    }
 }

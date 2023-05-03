@@ -7,6 +7,7 @@ $black: #2c2a2c;
 .breadcrumbs {
     margin-bottom: 6rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     font-family: "Montserrat";
     font-weight: 300;
@@ -103,6 +104,18 @@ $black: #2c2a2c;
             }
         }
     }
+
+    @media (max-width: 48em) {
+        &__item {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            line-height: 2.4rem;
+
+            &:not(:last-child) {
+                margin-right: 2.8rem;
+            }
+        }
+    }
 }
 
 .heading1 {
@@ -115,6 +128,24 @@ $black: #2c2a2c;
     font-weight: 500;
     font-size: 3.5rem;
     line-height: 4.2rem;
+
+    @media (max-width: 48em) {
+        font-size: 4rem;
+        line-height: 4.4rem;
+    }
+}
+
+.tabs-container {
+    @media (max-width: 48em) {
+        overflow-x: scroll;
+        margin-left: -2rem;
+        width: 64rem;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
 }
 
 .tabs {
@@ -170,6 +201,24 @@ $black: #2c2a2c;
             svg {
                 opacity: 1;
                 visibility: visible;
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: max-content;
+
+        &__btn {
+            padding: 1.8rem 2.2rem 2rem 2.4rem;
+            min-width: 12.4rem;
+            font-size: 2.4rem;
+            line-height: 3rem;
+            border-radius: 6rem;
+
+            &:not(:last-child) {
+                margin-right: 0.8rem;
             }
         }
     }
@@ -238,6 +287,31 @@ $black: #2c2a2c;
             }
         }
     }
+
+    @media (max-width: 48em) {
+        &__list {
+            &-item {
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+
+                &.dots {
+                    width: 8rem;
+                    height: 5rem;
+                    font-size: 3.2rem;
+                    line-height: 4rem;
+                }
+
+                &__btn {
+                    padding: 0.6rem 2rem 0.4rem 2rem;
+                    min-width: 8rem;
+                    height: 5rem;
+                    font-size: 3.2rem;
+                    line-height: 4rem;
+                }
+            }
+        }
+    }
 }
 
 .red-btn {
@@ -281,6 +355,16 @@ $black: #2c2a2c;
             color: $red;
         }
     }
+
+    @media (max-width: 48em) {
+        width: 100%;
+        height: 8rem;
+
+        span {
+            font-size: 3.2rem;
+            line-height: 4rem;
+        }
+    }
 }
 
 .black-btn {
@@ -306,6 +390,11 @@ $black: #2c2a2c;
     &:hover {
         background-color: $white;
         color: $black;
+    }
+
+    @media (max-width: 48em) {
+        font-size: 4rem;
+        line-height: 4.8rem;
     }
 }
 
@@ -374,5 +463,14 @@ $black: #2c2a2c;
     &.active {
         background-color: $white;
         border-color: $black;
+    }
+
+    @media (max-width: 48em) {
+        padding: 2.8rem;
+        min-width: 17.2rem;
+        height: 9.2rem;
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        border-radius: 6rem;
     }
 }
