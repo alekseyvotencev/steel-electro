@@ -130,9 +130,6 @@
                 &-list {
                     &-item {
                         border-top: 1px solid $gray;
-                        &:hover {
-                            background-color: #e8e8e8;
-                        }
 
                         &-btn {
                             padding: 0.6rem 0.1rem;
@@ -143,6 +140,10 @@
                             transition: background-color 0.2s ease-in-out;
 
                             &:hover {
+                                background-color: #e8e8e8;
+                            }
+
+                            &.active {
                                 background-color: #e8e8e8;
                             }
 
@@ -206,6 +207,10 @@
                                 background-color: #e8e8e8;
                             }
 
+                            &.active {
+                                background-color: #e8e8e8;
+                            }
+
                             & > span {
                                 font-size: 1.4rem;
                                 line-height: 1.7rem;
@@ -263,6 +268,10 @@
                             transition: background-color 0.2s ease-in-out;
 
                             &:hover {
+                                background-color: #e8e8e8;
+                            }
+
+                            &.active {
                                 background-color: #e8e8e8;
                             }
 
@@ -326,6 +335,10 @@
                                 background-color: #e8e8e8;
                             }
 
+                            &.active {
+                                background-color: #e8e8e8;
+                            }
+
                             & > span {
                                 font-size: 1.4rem;
                                 line-height: 1.7rem;
@@ -383,6 +396,10 @@
                             transition: background-color 0.2s ease-in-out;
 
                             &:hover {
+                                background-color: #e8e8e8;
+                            }
+
+                            &.active {
                                 background-color: #e8e8e8;
                             }
 
@@ -561,16 +578,21 @@
         align-items: center;
         border-right: 1px solid #b7b7b7;
         position: relative;
+        z-index: 0;
 
         &.active {
-            background: #ffffff;
-            box-shadow: 1px 1px 0.6rem 0.2rem rgba(0, 0, 0, 0.2);
+            z-index: 2;
 
             .header__search-form {
                 width: calc(100% - 2.3rem - 2.1rem - 2rem);
             }
 
             .header__search-clear {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .header__search-dropdown {
                 opacity: 1;
                 visibility: visible;
             }
@@ -605,6 +627,48 @@
                 width: 2.4rem;
                 height: 2.4rem;
                 object-fit: contain;
+            }
+        }
+
+        &-dropdown {
+            padding: 6.9rem 4.1rem 2.1rem 3.3rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: $white;
+            box-shadow: 1px 1px 0.6rem 0.2rem rgba(0, 0, 0, 0.2);
+            z-index: -1;
+            opacity: 0;
+
+            &__heading {
+                margin-bottom: 1rem;
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+                letter-spacing: 0.02em;
+                color: rgba(125, 131, 142, 0.6);
+            }
+
+            &__list {
+                &-item {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #efefef;
+                    }
+
+                    &-link {
+                        font-family: "Montserrat";
+                        font-weight: 500;
+                        font-size: 1.4rem;
+                        line-height: 2.1rem;
+                        letter-spacing: 0.02em;
+                        color: #7a7a7a;
+                    }
+                }
             }
         }
     }
@@ -740,6 +804,7 @@
 
             &__block {
                 display: none;
+
                 &.active {
                     display: block;
                 }
@@ -951,6 +1016,11 @@
 
                 .header__search-form {
                     width: 100%;
+
+                    &__btn {
+                        opacity: 1;
+                        visibility: visible;
+                    }
                 }
             }
 
@@ -978,6 +1048,21 @@
                     font-size: 3.6rem;
                     line-height: 4.4rem;
                 }
+
+                &__btn {
+                    position: absolute;
+                    right: 0;
+                    height: 100%;
+                    padding: 1.6rem;
+                    min-width: 14rem;
+                    text-align: center;
+                    font-size: 2.8rem;
+                    line-height: 3.4rem;
+                    border-radius: 1rem;
+                    background-color: #000000;
+                    opacity: 0;
+                    visibility: hidden;
+                }
             }
 
             &-clear {
@@ -992,6 +1077,30 @@
                     path {
                         stroke-width: 1px;
                         stroke: $black;
+                    }
+                }
+            }
+
+            &-dropdown {
+                padding: 3.6rem 5.8rem 22.2rem 2.4rem;
+                top: calc(100% + 1.4rem);
+                box-shadow: 0.2rem 0.2rem 1.2rem 0.4rem rgba(0, 0, 0, 0.2);
+
+                &__heading {
+                    margin-bottom: 3.4rem;
+                    font-size: 2.8rem;
+                    line-height: 4.2rem;
+                }
+
+                &__list {
+                    &-item {
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        border-width: 0.2rem;
+                        &-link {
+                            font-size: 2.8rem;
+                            line-height: 4.2rem;
+                        }
                     }
                 }
             }

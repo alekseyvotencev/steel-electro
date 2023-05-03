@@ -62,12 +62,24 @@
             </button>
             <form action="#" class="header__search-form">
                 <input type="search" placeholder="Найти товар ..." class="header__search-form__input">
+                <button class="black-btn mobile header__search-form__btn">Поиск</button>
             </form>
             <button class="header__search-clear">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18M18 18L6 6.00001" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
                 </svg>
             </button>
+            <div class="header__search-dropdown">
+                <p class="header__search-dropdown__heading">Популярные запросы</p>
+                <ul class="header__search-dropdown__list">
+                    <li class="header__search-dropdown__list-item"><a href="#"
+                            class="header__search-dropdown__list-item-link">Арматура А5</a></li>
+                    <li class="header__search-dropdown__list-item"><a href="#"
+                            class="header__search-dropdown__list-item-link">Кабель силовой</a></li>
+                    <li class="header__search-dropdown__list-item"><a href="#"
+                            class="header__search-dropdown__list-item-link">Стальной пруток</a></li>
+                </ul>
+            </div>
         </div>
         <div class="header__shopping-cart">
             <button>
@@ -103,7 +115,7 @@
                     <button data-path="contacts" class="active">Контакты</button>
                     <button data-path="requisites">Реквизиты</button>
                 </div>
-                <div class="header__contacts-dropdown__block active">
+                <div class="header__contacts-dropdown__block active" data-target="contacts">
                     <p class="header__contacts-dropdown__subheading">Телефон</p>
                     <div class="header__contacts-dropdown__links">
                         <div class="header__contacts-dropdown__link">
@@ -144,7 +156,7 @@
                     <p class="header__contacts-dropdown__text">г. Алматы, ул. Кунаева 21Б, офис 33</p>
                     <a href="#" class="header__contacts-dropdown__map black-btn">Посмотреть на карте</a>
                 </div>
-                <div class="header__contacts-dropdown__block">
+                <div class="header__contacts-dropdown__block" data-target="requisites">
                     <p class="header__contacts-dropdown__subheading">Название организации</p>
                     <p class="header__contacts-dropdown__text">Сталь Электро</p>
                     <div class="line"></div>

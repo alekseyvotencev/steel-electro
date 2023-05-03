@@ -49,8 +49,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const headerLogo = header.querySelector('.header__logo')
 
     headerSearchClear.addEventListener('click', function () {
-        inputSearch.focus();
         inputSearch.value = "";
+
+        if (window.innerWidth <= 768) {
+            inputSearch.unfocus();
+        } else {
+            inputSearch.focus();
+        }
     })
 
     if (window.innerWidth > 768) {
@@ -80,6 +85,22 @@ document.addEventListener('DOMContentLoaded', function () {
             headerSearch.classList.remove('active');
         })
     }
+
+    // контакты в хедере
+
+    const headerContactsBtns = headerContacts.querySelectorAll('.header__contacts-dropdown__btns > button');
+    const headerContactsBlocks = headerContacts.querySelectorAll('.header__contacts-dropdown__block');
+    headerContactsBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            headerContactsBtns.forEach(el => {
+                el.classList.remove('active');
+            })
+            headerContactsBlocks.forEach(el => el.classList.remove('active'));
+            btn.classList.add('active');
+            const path = btn.dataset.path;
+            headerContacts.querySelector(`[data-target=${path}]`).classList.add('active');
+        })
+    })
 
     // мобильное меню в хедере
     const headerBurger = header.querySelector('.header__burger');
@@ -111,10 +132,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.innerWidth > 768) {
             menuItem.addEventListener('mouseover', function () {
                 submenu.classList.add('active');
+                menuBtn.classList.add('active');
             })
 
             menuItem.addEventListener('mouseout', function () {
                 submenu.classList.remove('active');
+                menuBtn.classList.remove('active');
             })
         } else {
             menuBtn.addEventListener('click', function () {
@@ -181,8 +204,6 @@ document.addEventListener('DOMContentLoaded', function () {
         getMinusStepMenu(btn);
     })
 
-
-
     // город в хедере
     const headerLocationBtn = document.querySelector('.header__location-btn');
     const locationChoice = document.querySelector('.choose-city');
@@ -192,6 +213,48 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     locationChoiceClose.addEventListener('click', function () {
         closePopupElement(locationChoice);
+
+    })
+    const countryBtns = locationChoice.querySelectorAll('.choose-city__left-list__item-btn');
+    const citiesLists = locationChoice.querySelectorAll('[data-target]');
+
+    const chooseCountryBtn = locationChoice.querySelector('.choose-city__left-dropdown__btn');
+    const chooseCountryList = locationChoice.querySelector('.choose-city__left-list');
+
+    countryBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            countryBtns.forEach(el => el.classList.remove('active'));
+            btn.classList.add('active');
+            const path = btn.dataset.path;
+            citiesLists.forEach(block => block.classList.remove('active'));
+            locationChoice.querySelector(`[data-target=${path}]`).classList.add('active');
+
+            if (window.innerWidth <= 768) {
+                chooseCountryList.classList.remove('active');
+                chooseCountryBtn.classList.remove('active');
+
+                const imgPath = btn.querySelector('img').src;
+                const choisedCountry = btn.innerText;
+                chooseCountryBtn.querySelector('.flag').src = imgPath;
+                chooseCountryBtn.querySelector('span').innerText = choisedCountry;
+            }
+        })
+    })
+
+    chooseCountryBtn.addEventListener('click', function () {
+        chooseCountryBtn.classList.toggle('active');
+        chooseCountryList.classList.toggle('active');
+    })
+
+    const headerLocationMobileBtn = document.querySelector('.header__mobile-bottom__location');
+    headerLocationMobileBtn.addEventListener('click', function () {
+        headerBurger.classList.remove('active');
+        headerMobileBottom.classList.remove('active');
+        headerCatalogPopup.classList.remove('active');
+        headerMobileMenu.classList.remove('active');
+        document.body.classList.add('dark');
+        headerCatalogPopup.querySelectorAll('active').forEach(item => item.classList.remove('active'));
+        locationChoice.classList.add('active');
     })
 
     // каталог в хедере
