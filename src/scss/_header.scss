@@ -129,20 +129,29 @@
 
                 &-list {
                     &-item {
-                        padding: 0.6rem 0.1rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        font-size: 1.4rem;
-                        line-height: 1.7rem;
-                        color: $black;
                         border-top: 1px solid $gray;
-                        transition: background-color 0.2s ease-in-out;
-                        cursor: pointer;
 
-                        img {
-                            width: 1.8rem;
-                            height: 1.8rem;
+                        &-btn {
+                            padding: 0.6rem 0.1rem;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            transition: background-color 0.2s ease-in-out;
+
+                            &:hover {
+                                background-color: #e8e8e8;
+                            }
+
+                            & > span {
+                                font-size: 1.4rem;
+                                line-height: 1.7rem;
+                                color: $black;
+                            }
+                            & > img {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
                         }
 
                         &:first-child {
@@ -151,10 +160,6 @@
 
                         &:last-child {
                             border-bottom: 1px solid $gray;
-                        }
-
-                        &:hover {
-                            background-color: #e8e8e8;
                         }
                     }
                 }
@@ -184,20 +189,29 @@
 
                 &-list {
                     &-item {
-                        padding: 0.6rem 0.1rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        font-size: 1.4rem;
-                        line-height: 1.7rem;
-                        color: $black;
                         border-top: 1px solid $gray;
-                        transition: background-color 0.2s ease-in-out;
-                        cursor: pointer;
 
-                        img {
-                            width: 1.8rem;
-                            height: 1.8rem;
+                        &-btn {
+                            padding: 0.6rem 0.1rem;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            transition: background-color 0.2s ease-in-out;
+
+                            &:hover {
+                                background-color: #e8e8e8;
+                            }
+
+                            & > span {
+                                font-size: 1.4rem;
+                                line-height: 1.7rem;
+                                color: $black;
+                            }
+                            & > img {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
                         }
 
                         &:first-child {
@@ -206,10 +220,6 @@
 
                         &:last-child {
                             border-bottom: 1px solid $gray;
-                        }
-
-                        &:hover {
-                            background-color: #e8e8e8;
                         }
                     }
                 }
@@ -239,20 +249,29 @@
 
                 &-list {
                     &-item {
-                        padding: 0.6rem 0.1rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        font-size: 1.4rem;
-                        line-height: 1.7rem;
-                        color: $black;
                         border-top: 1px solid $gray;
-                        transition: background-color 0.2s ease-in-out;
-                        cursor: pointer;
 
-                        img {
-                            width: 1.8rem;
-                            height: 1.8rem;
+                        &-btn {
+                            padding: 0.6rem 0.1rem;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            transition: background-color 0.2s ease-in-out;
+
+                            &:hover {
+                                background-color: #e8e8e8;
+                            }
+
+                            & > span {
+                                font-size: 1.4rem;
+                                line-height: 1.7rem;
+                                color: $black;
+                            }
+                            & > img {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
                         }
 
                         &:first-child {
@@ -261,10 +280,6 @@
 
                         &:last-child {
                             border-bottom: 1px solid $gray;
-                        }
-
-                        &:hover {
-                            background-color: #e8e8e8;
                         }
                     }
                 }
@@ -294,20 +309,29 @@
 
                 &-list {
                     &-item {
-                        padding: 0.6rem 0.1rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        font-size: 1.4rem;
-                        line-height: 1.7rem;
-                        color: $black;
                         border-top: 1px solid $gray;
-                        transition: background-color 0.2s ease-in-out;
-                        cursor: pointer;
 
-                        img {
-                            width: 1.8rem;
-                            height: 1.8rem;
+                        &-btn {
+                            padding: 0.6rem 0.1rem;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            transition: background-color 0.2s ease-in-out;
+
+                            &:hover {
+                                background-color: #e8e8e8;
+                            }
+
+                            & > span {
+                                font-size: 1.4rem;
+                                line-height: 1.7rem;
+                                color: $black;
+                            }
+                            & > img {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
                         }
 
                         &:first-child {
@@ -316,10 +340,6 @@
 
                         &:last-child {
                             border-bottom: 1px solid $gray;
-                        }
-
-                        &:hover {
-                            background-color: #e8e8e8;
                         }
                     }
                 }
@@ -349,20 +369,29 @@
 
                 &-list {
                     &-item {
-                        padding: 0.6rem 0.1rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        font-size: 1.4rem;
-                        line-height: 1.7rem;
-                        color: $black;
                         border-top: 1px solid $gray;
-                        transition: background-color 0.2s ease-in-out;
-                        cursor: pointer;
 
-                        img {
-                            width: 1.8rem;
-                            height: 1.8rem;
+                        &-btn {
+                            padding: 0.6rem 0.1rem;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            transition: background-color 0.2s ease-in-out;
+
+                            &:hover {
+                                background-color: #e8e8e8;
+                            }
+
+                            & > span {
+                                font-size: 1.4rem;
+                                line-height: 1.7rem;
+                                color: $black;
+                            }
+                            & > img {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
                         }
 
                         &:first-child {
@@ -371,10 +400,6 @@
 
                         &:last-child {
                             border-bottom: 1px solid $gray;
-                        }
-
-                        &:hover {
-                            background-color: #e8e8e8;
                         }
                     }
                 }
@@ -405,19 +430,18 @@
                 &-list {
                     &-item {
                         padding: 0.6rem 0.1rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        font-size: 1.4rem;
-                        line-height: 1.7rem;
-                        color: $black;
                         border-top: 1px solid $gray;
                         transition: background-color 0.2s ease-in-out;
-                        cursor: pointer;
 
-                        img {
-                            width: 1.8rem;
-                            height: 1.8rem;
+                        &:hover {
+                            background-color: #e8e8e8;
+                        }
+
+                        &-link {
+                            width: 100%;
+                            display: block;
+                            font-size: 1.4rem;
+                            line-height: 1.7rem;
                         }
 
                         &:first-child {
@@ -426,10 +450,6 @@
 
                         &:last-child {
                             border-bottom: 1px solid $gray;
-                        }
-
-                        &:hover {
-                            background-color: #e8e8e8;
                         }
                     }
                 }
@@ -1025,9 +1045,21 @@
                         line-height: 3.4rem;
                         border-width: 0.2rem;
 
-                        & > img {
-                            width: 3.6rem;
-                            height: 3.6rem;
+                        &-btn {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            & > span {
+                                font-size: 2.8rem;
+                                line-height: 3.4rem;
+                            }
+
+                            & > img {
+                                width: 3.6rem;
+                                height: 3.6rem;
+                            }
                         }
                     }
                 }
@@ -1077,14 +1109,21 @@
                         padding-top: 1.2rem;
                         padding-bottom: 1.2rem;
 
-                        & > p {
-                            font-size: 2.8rem;
-                            line-height: 3.4rem;
-                        }
+                        &-btn {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
 
-                        & > img {
-                            width: 3.6rem;
-                            height: 3.6rem;
+                            & > span {
+                                font-size: 2.8rem;
+                                line-height: 3.4rem;
+                            }
+
+                            & > img {
+                                width: 3.6rem;
+                                height: 3.6rem;
+                            }
                         }
                     }
                 }
@@ -1096,6 +1135,8 @@
                 width: 100%;
                 height: calc(100vh - 9rem - 13.2rem);
                 overflow-y: scroll;
+                display: flex;
+                flex-direction: column;
                 z-index: 2;
                 background-color: $white;
 
@@ -1144,14 +1185,21 @@
                         padding-top: 1.2rem;
                         padding-bottom: 1.2rem;
 
-                        & > p {
-                            font-size: 2.8rem;
-                            line-height: 3.4rem;
-                        }
+                        &-btn {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
 
-                        & > img {
-                            width: 3.6rem;
-                            height: 3.6rem;
+                            & > span {
+                                font-size: 2.8rem;
+                                line-height: 3.4rem;
+                            }
+
+                            & > img {
+                                width: 3.6rem;
+                                height: 3.6rem;
+                            }
                         }
                     }
                 }
@@ -1219,14 +1267,21 @@
                         padding-top: 1.2rem;
                         padding-bottom: 1.2rem;
 
-                        & > p {
-                            font-size: 2.8rem;
-                            line-height: 3.4rem;
-                        }
+                        &-btn {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
 
-                        & > img {
-                            width: 3.6rem;
-                            height: 3.6rem;
+                            & > span {
+                                font-size: 2.8rem;
+                                line-height: 3.4rem;
+                            }
+
+                            & > img {
+                                width: 3.6rem;
+                                height: 3.6rem;
+                            }
                         }
                     }
                 }
@@ -1286,14 +1341,21 @@
                         padding-top: 1.2rem;
                         padding-bottom: 1.2rem;
 
-                        & > p {
-                            font-size: 2.8rem;
-                            line-height: 3.4rem;
-                        }
+                        &-btn {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
 
-                        & > img {
-                            width: 3.6rem;
-                            height: 3.6rem;
+                            & > span {
+                                font-size: 2.8rem;
+                                line-height: 3.4rem;
+                            }
+
+                            & > img {
+                                width: 3.6rem;
+                                height: 3.6rem;
+                            }
                         }
                     }
                 }

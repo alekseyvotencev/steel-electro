@@ -107,84 +107,53 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 
+    function getMenuAnimation(menuItem, submenu, menuBtn) {
+        if (window.innerWidth > 768) {
+            menuItem.addEventListener('mouseover', function () {
+                submenu.classList.add('active');
+            })
+
+            menuItem.addEventListener('mouseout', function () {
+                submenu.classList.remove('active');
+            })
+        } else {
+            menuBtn.addEventListener('click', function () {
+                submenu.classList.add('active');
+            })
+        }
+    }
+
     // step1
     const headerStep1Items = header.querySelectorAll('.header__catalog-popup__step1-list-item');
     headerStep1Items.forEach(item => {
-        if (window.innerWidth > 768) {
-            item.addEventListener('mouseover', function () {
-                item.querySelector('.header__catalog-popup__step2').classList.add('active');
-            })
-
-            item.addEventListener('mouseout', function () {
-                item.querySelector('.header__catalog-popup__step2').classList.remove('active');
-            })
-        } else {
-            item.addEventListener('click', function () {
-                item.querySelector('.header__catalog-popup__step2').classList.add('active');
-            })
-        }
+        getMenuAnimation(item, item.querySelector('.header__catalog-popup__step2'), item.querySelector('.header__catalog-popup__step1-list-item-btn'));
     })
 
     // step2
     const headerStep2Items = header.querySelectorAll('.header__catalog-popup__step2-list-item');
     headerStep2Items.forEach(item => {
-        if (window.innerWidth > 768) {
-            item.addEventListener('mouseover', function () {
-                item.querySelector('.header__catalog-popup__step3').classList.add('active');
-            })
-
-            item.addEventListener('mouseout', function () {
-                item.querySelector('.header__catalog-popup__step3').classList.remove('active');
-            })
-        } else {
-            item.addEventListener('click', function () {
-                item.querySelector('.header__catalog-popup__step3').classList.add('active');
-            })
-        }
+        getMenuAnimation(item, item.querySelector('.header__catalog-popup__step3'), item.querySelector('.header__catalog-popup__step2-list-item-btn'));
     })
 
 
     // step3
     const headerStep3Items = header.querySelectorAll('.header__catalog-popup__step3-list-item');
     headerStep3Items.forEach(item => {
-        if (window.innerWidth > 768) {
-            item.addEventListener('mouseover', function () {
-                item.querySelector('.header__catalog-popup__step4').classList.add('active');
-            })
-
-            item.addEventListener('mouseout', function () {
-                item.querySelector('.header__catalog-popup__step4').classList.remove('active');
-            })
-        } else {
-            item.addEventListener('click', function () {
-                item.querySelector('.header__catalog-popup__step4').classList.add('active');
-            })
-        }
+        getMenuAnimation(item, item.querySelector('.header__catalog-popup__step4'), item.querySelector('.header__catalog-popup__step3-list-item-btn'));
     })
 
     const headerStep3Back = header.querySelectorAll('.header__catalog-popup__step3-back');
     headerStep3Back.forEach(btn => {
         btn.addEventListener('click', function () {
             btn.parentElement.classList.remove('active');
+
         })
     })
 
     // step4
     const headerStep4Items = header.querySelectorAll('.header__catalog-popup__step4-list-item');
     headerStep4Items.forEach(item => {
-        if (window.innerWidth > 768) {
-            item.addEventListener('mouseover', function () {
-                item.querySelector('.header__catalog-popup__step5').classList.add('active');
-            })
-
-            item.addEventListener('mouseout', function () {
-                item.querySelector('.header__catalog-popup__step5').classList.remove('active');
-            })
-        } else {
-            item.addEventListener('click', function () {
-                item.querySelector('.header__catalog-popup__step5').classList.add('active');
-            })
-        }
+        getMenuAnimation(item, item.querySelector('.header__catalog-popup__step5'), item.querySelector('.header__catalog-popup__step4-list-item-btn'));
     })
 
     const headerStep4Back = header.querySelector('.header__catalog-popup__step4-back');
@@ -195,19 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // step5
     const headerStep5Items = header.querySelectorAll('.header__catalog-popup__step5-list-item');
     headerStep5Items.forEach(item => {
-        if (window.innerWidth > 768) {
-            item.addEventListener('mouseover', function () {
-                item.querySelector('.header__catalog-popup__step6').classList.add('active');
-            })
-
-            item.addEventListener('mouseout', function () {
-                item.querySelector('.header__catalog-popup__step6').classList.remove('active');
-            })
-        } else {
-            item.addEventListener('click', function () {
-                item.querySelector('.header__catalog-popup__step6').classList.add('active');
-            })
-        }
+        getMenuAnimation(item, item.querySelector('.header__catalog-popup__step6'), item.querySelector('.header__catalog-popup__step5-list-item-btn'));
     })
 
     const headerStep5Back = header.querySelector('.header__catalog-popup__step5-back');
