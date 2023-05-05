@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bd3d2e96-cba3-46c0-8f30-c68fa989a9ee&lang=ru_RU"
+        type="text/javascript">
+        </script>
+    <link rel="stylesheet" href="./src/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./src/fonts/fonts.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Неконечная страница</title>
+</head>
+
+<body>
+    @@include('./templates/header.html')
+    <main>
+        <div class="container">
+            <div class="main-container">
+                <div class="city-main__left desktop">
+                    @@include('./templates/categories-menu.html')
+                </div>
+                <div class="city-main__right">
+                    @@include('./templates/metalrolling-section.html')
+                    @@include('./templates/description.html')
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./templates/footer.html')
+</body>
+
+</html>

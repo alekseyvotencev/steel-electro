@@ -66,4 +66,25 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
+
+    // страница Конечная страница
+
+    if (document.querySelector('.deepest-page__tags')) {
+        const deepestPageTags = new Swiper('.deepest-page__tags', {
+            navigation: {
+                nextEl: '.deepest-page__tags-next',
+                prevEl: '.deepest-page__tags-prev',
+            },
+            breakpoints: {
+                320: {
+                    spaceBetween: rem(.8),
+                    slidesPerView: 'auto',
+                },
+                769: {
+                    spaceBetween: rem(1),
+                    slidesPerView: 8.63,
+                }
+            }
+        })
+    }
 })

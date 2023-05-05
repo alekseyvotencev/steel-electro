@@ -55,20 +55,23 @@ $black: #2c2a2c;
                 transition: opacity 0.2s ease-in-out;
             }
 
-            span {
-                z-index: 4;
-            }
-
             img {
                 width: 1.7rem;
                 height: 1.7rem;
                 object-fit: contain;
-                z-index: 4;
             }
 
             &:hover {
                 background-color: $white;
                 box-shadow: 1px 1px 0.6rem 0.2rem rgba(0, 0, 0, 0.2);
+
+                span {
+                    z-index: 4;
+                }
+
+                img {
+                    z-index: 4;
+                }
 
                 &::after {
                     opacity: 1;
@@ -94,6 +97,7 @@ $black: #2c2a2c;
             transition-property: opacity, visibility;
             transition-duration: 0.2s;
             transition-timing-function: ease-in-out;
+            z-index: 1;
 
             &__list {
                 &-item {
@@ -379,7 +383,7 @@ $black: #2c2a2c;
     text-align: center;
     background-color: $black;
     border: 1px solid $black;
-    transition-property: background-color, color;
+    transition-property: background-color;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
 
@@ -387,9 +391,25 @@ $black: #2c2a2c;
         transition: color 0.2s ease-in-out;
     }
 
+    svg {
+        path {
+            transition: stroke 0.2s ease-in-out;
+        }
+    }
+
     &:hover {
         background-color: $white;
         color: $black;
+
+        span {
+            color: $black;
+        }
+
+        svg {
+            path {
+                stroke: $black;
+            }
+        }
     }
 
     @media (max-width: 48em) {

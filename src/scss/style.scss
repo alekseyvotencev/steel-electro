@@ -6,6 +6,8 @@
 @import "footer";
 @import "popup";
 
+@import "shopping-cart";
+
 @import "choose-city";
 
 @import "main-hero";
@@ -39,6 +41,8 @@
 
 @import "error";
 
+@import "deepest-page";
+
 @import "about-hero";
 @import "about-description";
 @import "about-location";
@@ -54,6 +58,10 @@ html.lock {
 
 .lock2 {
     overflow-y: hidden;
+}
+
+body {
+    position: relative;
 }
 
 body.lock {

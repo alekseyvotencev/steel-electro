@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const headerContacts = header.querySelector('.header__contacts');
     const headerLocation = header.querySelector('.header__location');
     const headerSearchClear = header.querySelector('.header__search-clear');
-    const headerLogo = header.querySelector('.header__logo')
+    const headerLogo = header.querySelector('.header__logo');
+    const headerShoppingCart = header.querySelector('.header__shopping-cart');
+
 
     headerSearchClear.addEventListener('click', function () {
         inputSearch.value = "";
@@ -83,6 +85,33 @@ document.addEventListener('DOMContentLoaded', function () {
         inputSearch.addEventListener('focusout', function () {
             headerLogo.classList.remove('disable');
             headerSearch.classList.remove('active');
+        })
+    }
+
+    // корзина в хедере
+    const shoppingCart = document.querySelector('.shopping-cart');
+    headerShoppingCart.addEventListener('click', function () {
+        openPopupElement(shoppingCart);
+    })
+    const shoppingCartClose = shoppingCart.querySelector('.shopping-cart__close');
+    shoppingCartClose.addEventListener('click', function () {
+        closePopupElement(shoppingCart);
+    })
+
+    if (document.querySelector('.shopping-cart__item-left__count')) {
+        const shoppingCartItems = document.querySelectorAll('.shopping-cart__item');
+        shoppingCartItems.forEach(item => {
+            let minusBtn = item.querySelector('.minus');
+            let plusBtn = item.querySelector('.plus');
+            let number = item.querySelector('.number');
+            minusBtn.addEventListener('click', function () {
+                if (Number(number.value) > 1) {
+                    number.value = Number(number.value) - 1;
+                }
+            })
+            plusBtn.addEventListener('click', function () {
+                number.value = Number(number.value) + 1;
+            })
         })
     }
 
@@ -299,7 +328,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null
                 } else {
-                    content.style.maxHeight = content.scrollHeight / 10 + "rem";
+                    content.style.maxHeight = content.scrollHeight / 5 + "rem";
+                }
+
+                if (accHead.classList.contains('categories-menu__accordion-item__subaccordion-item-head')) {
+                    accHead.parentElement.parentElement.parentElement.style.maxHeight = 'none';
                 }
             })
         })
@@ -419,9 +452,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // табы
-    function initTabs(tabsContainer, contentConainer) {
-        if (document.querySelector('.tabs__btn')) {
-            const tabsBtns = tabsContainer.querySelectorAll('.tabs__btn');
+    function initTabs(tabsContainer, contentConainer, tabBtnClass) {
+        if (document.querySelector(`.${tabBtnClass}`)) {
+            const tabsBtns = tabsContainer.querySelectorAll(`.${tabBtnClass}`);
             const contentBlocks = contentConainer.querySelectorAll('[data-target]');
             tabsBtns.forEach(btn => {
                 btn.addEventListener('click', function (e) {
@@ -459,7 +492,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // НОВОСТИ
 
     // табы новостей 
-    initTabs(document.querySelector('.news-main .tabs'), document.querySelector('.news-main'))
+    initTabs(document.querySelector('.news-main .tabs'), document.querySelector('.news-main'), 'tabs__btn');
 
     // длина новости (добавляется многоточие в конце при переполнении)
 
@@ -472,4 +505,41 @@ document.addEventListener('DOMContentLoaded', function () {
     //         }
     //     })
     // }
+
+    // тэги на странице Неконечная страница
+    if (document.querySelector('.deepest-page__tags-slide__btn')) {
+        initTabs(document.querySelector('.deepest-page__tags'), document.querySelector('.deepest-page__right'), 'deepest-page__tags-slide__btn');
+    }
+
+    // фильтры на странице Неконечная страница
+    if (document.querySelector('.deepest-page__filters-item__btn') && window.innerWidth > 768) {
+        const deepestPageFltersBtns = document.querySelectorAll('.deepest-page__filters-item__btn');
+        deepestPageFltersBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                deepestPageFltersBtns.forEach(el => {
+                    if (btn !== el) {
+                        el.classList.remove('active');
+                        el.nextElementSibling.classList.remove('active');
+                    }
+                });
+                btn.classList.toggle('active');
+                btn.nextElementSibling.classList.toggle('active');
+            })
+        })
+    }
+
+    if (document.querySelector('.deepest-page__filters-open') && window.innerWidth <= 768) {
+        const deepestPageFiltersOpen = document.querySelector('.deepest-page__filters-open');
+        const deepestPageFilters = document.querySelector('.deepest-page__filters');
+        const deepestPageFiltersClose = document.querySelector('.deepest-page__filters-close');
+        deepestPageFiltersOpen.addEventListener('click', function () {
+            openPopupElement(deepestPageFilters)
+        })
+
+        deepestPageFiltersClose.addEventListener('click', function () {
+            closePopupElement(deepestPageFilters)
+        })
+    }
+
+
 })
